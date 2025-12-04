@@ -54,6 +54,7 @@ function doPost(e) {
       'consulting': '経営顧問契約・経営支援',
       'subsidy': '助成金・補助金サポート',
       'accounting': '月次決算早期化',
+      'cloud-accounting': 'クラウド会計システムへの移行支援',
       'labor': '労務管理内製化',
       'cost': 'コスト削減支援',
       'tax': '税制情報提供・税理士連携サポート',
