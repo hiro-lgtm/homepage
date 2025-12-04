@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <!-- コンサルティングアイコン -->
+  <g id="consulting">
+    <circle cx="200" cy="200" r="80" fill="#f8fafc" stroke="#2c3e50" stroke-width="3"/>
+    <path d="M 150 200 L 200 150 L 250 200 L 200 250 Z" fill="#3498db"/>
+    <circle cx="200" cy="200" r="20" fill="#2c3e50"/>
+  </g>
+</svg>
+

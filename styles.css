@@ -1,0 +1,1189 @@
+/* リセット & ベーススタイル */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #2c3e50;
+    --primary-dark: #1a252f;
+    --accent-color: #3498db;
+    --text-color: #2c3e50;
+    --text-light: #7f8c8d;
+    --bg-color: #ffffff;
+    --bg-light: #fafbfc;
+    --bg-dark: #1a252f;
+    --border-color: #e1e8ed;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+/* パフォーマンス最適化 */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, 'Noto Sans JP', sans-serif;
+    line-height: 1.7;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    font-weight: 400;
+    letter-spacing: 0.01em;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ナビゲーション */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo a {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-color);
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    transition: color 0.2s ease;
+}
+
+.logo a:hover {
+    color: var(--primary-color);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: var(--text-color);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+/* ヒーローセクション */
+.hero {
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    padding: 140px 20px 100px;
+    background: var(--bg-color);
+    overflow: hidden;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/hero-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.4;
+    z-index: 0;
+}
+
+.hero-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.05);
+    z-index: 1;
+}
+
+.hero-background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.75) 100%);
+    z-index: 2;
+}
+
+.hero-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    max-width: 800px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content {
+    width: 100%;
+}
+
+
+.photo-placeholder-small {
+    width: 100%;
+    height: 180px;
+    background-color: var(--bg-light);
+    border: 2px dashed var(--border-color);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-light);
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+}
+
+.reason-photo-1 .photo-placeholder-small {
+    background-image: url('images/reason-1.jpg?v=20241204');
+    background-size: cover;
+    background-position: center;
+    border: none;
+}
+
+.reason-photo-1 .photo-placeholder-small span {
+    display: none;
+}
+
+.reason-photo-2 .photo-placeholder-small {
+    background-image: url('images/reason-2.jpg?v=20241204');
+    background-size: cover;
+    background-position: center;
+    border: none;
+}
+
+.reason-photo-2 .photo-placeholder-small span {
+    display: none;
+}
+
+.reason-photo-3 .photo-placeholder-small {
+    background-image: url('images/reason-3.jpg?v=20241204');
+    background-size: cover;
+    background-position: center;
+    border: none;
+}
+
+.reason-photo-3 .photo-placeholder-small span {
+    display: none;
+}
+
+.reason-photo-4 .photo-placeholder-small {
+    background-image: url('images/reason-4.jpg?v=20241204');
+    background-size: cover;
+    background-position: center;
+    border: none;
+}
+
+.reason-photo-4 .photo-placeholder-small span {
+    display: none;
+}
+
+.photo-placeholder-medium {
+    width: 100%;
+    height: 200px;
+    background-color: var(--bg-light);
+    border: 2px dashed var(--border-color);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-light);
+    font-size: 0.875rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-photo-1 .photo-placeholder-medium {
+    background-image: url('images/testimonial-1.jpg?v=20241204');
+    background-size: cover;
+    background-position: center;
+    border: none;
+}
+
+.testimonial-photo-1 .photo-placeholder-medium span {
+    display: none;
+}
+
+.testimonial-photo-2 .photo-placeholder-medium {
+    background-image: url('images/testimonial-2.jpg?v=20241204');
+    background-size: cover;
+    background-position: center;
+    border: none;
+}
+
+.testimonial-photo-2 .photo-placeholder-medium span {
+    display: none;
+}
+
+.testimonial-photo-3 .photo-placeholder-medium {
+    background-image: url('images/testimonial-3.jpg?v=20241204');
+    background-size: cover;
+    background-position: center;
+    border: none;
+}
+
+.testimonial-photo-3 .photo-placeholder-medium span {
+    display: none;
+}
+
+.photo-placeholder-large {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-light);
+    border: 2px dashed var(--border-color);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-light);
+    font-size: 0.875rem;
+    text-align: center;
+    padding: 2rem;
+}
+
+.photo-placeholder-large p {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.photo-placeholder-large span {
+    font-size: 0.75rem;
+}
+
+
+.reason-photo {
+    margin-bottom: 1rem;
+}
+
+.testimonial-photo {
+    margin-bottom: 1.5rem;
+}
+
+.hero-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+}
+
+.hero-subtitle {
+    font-size: clamp(1rem, 2vw, 1.125rem);
+    color: var(--text-light);
+    margin-bottom: 3rem;
+    line-height: 1.8;
+    font-weight: 400;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* ボタン */
+.btn {
+    display: inline-block;
+    padding: 0.875rem 2.25rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+}
+
+.btn-primary {
+    background-color: var(--text-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--bg-light);
+    border-color: var(--text-color);
+}
+
+.btn-large {
+    padding: 1.125rem 2.5rem;
+    font-size: 1rem;
+}
+
+/* セクション共通スタイル */
+section {
+    padding: 100px 0;
+}
+
+.section-title {
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+    letter-spacing: -0.02em;
+    line-height: 1.3;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 1rem;
+    margin-bottom: 4rem;
+    line-height: 1.8;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 導入実績セクション */
+.stats-section {
+    background-color: var(--bg-light);
+    padding: 80px 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 3rem;
+    text-align: center;
+}
+
+.stat-box {
+    padding: 2rem 1rem;
+}
+
+.stat-number-large {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.stat-label-large {
+    font-size: 1rem;
+    color: var(--text-light);
+    font-weight: 400;
+}
+
+/* 選ばれる理由セクション */
+.reasons-section {
+    background-color: var(--bg-color);
+    padding: 100px 0;
+}
+
+.reasons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    margin-top: 0;
+}
+
+.reason-card {
+    padding: 2.5rem;
+    background-color: var(--bg-light);
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.reason-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    transition: all 0.3s ease;
+}
+
+.reason-photo {
+    margin-bottom: 1.5rem;
+}
+
+.reason-icon {
+    font-size: 2rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.reason-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+.reason-card p {
+    color: var(--text-light);
+    line-height: 1.8;
+    font-size: 0.95rem;
+}
+
+/* お客様の声セクション */
+.testimonials-section {
+    background-color: var(--bg-light);
+    padding: 100px 0;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    margin-top: 0;
+}
+
+.testimonial-card {
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    transition: all 0.2s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    transition: all 0.3s ease;
+}
+
+.testimonial-header {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.testimonial-company {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.testimonial-service {
+    font-size: 0.875rem;
+    color: var(--text-light);
+}
+
+.testimonial-text {
+    color: var(--text-light);
+    line-height: 1.8;
+    font-size: 0.95rem;
+}
+
+/* 導入事例セクション */
+.cases-section {
+    background-color: var(--bg-color);
+    padding: 100px 0;
+}
+
+.cases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    margin-top: 0;
+}
+
+.case-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.case-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.case-photo {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background-color: var(--bg-light);
+}
+
+.photo-placeholder-case {
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-light);
+    border: 2px dashed var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-light);
+    font-size: 0.875rem;
+}
+
+.case-photo-1 .photo-placeholder-case {
+    background-image: url('images/case-1.jpg?v=20241204');
+    background-size: cover;
+    background-position: center;
+    border: none;
+}
+
+.case-photo-1 .photo-placeholder-case span {
+    display: none;
+}
+
+.case-photo-2 .photo-placeholder-case {
+    background-image: url('images/case-2.jpg?v=20241204');
+    background-size: cover;
+    background-position: center;
+    border: none;
+}
+
+.case-photo-2 .photo-placeholder-case span {
+    display: none;
+}
+
+.case-photo-3 .photo-placeholder-case {
+    background-image: url('images/case-3.jpg?v=20241204');
+    background-size: cover;
+    background-position: center;
+    border: none;
+}
+
+.case-photo-3 .photo-placeholder-case span {
+    display: none;
+}
+
+.case-content {
+    padding: 2rem;
+}
+
+.case-category {
+    font-size: 0.875rem;
+    color: var(--text-light);
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+}
+
+.case-content h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    letter-spacing: -0.01em;
+}
+
+.case-content p {
+    color: var(--text-light);
+    line-height: 1.8;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+.case-link {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.case-link:hover {
+    color: var(--accent-color);
+}
+
+/* サービスセクション */
+.services {
+    background-color: var(--bg-color);
+}
+
+.services .container {
+    max-width: 900px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    margin-top: 0;
+}
+
+.service-card {
+    background-color: transparent;
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border-color);
+    transition: all 0.2s ease;
+    text-align: left;
+}
+
+.service-card:last-child {
+    border-bottom: none;
+}
+
+.service-card:hover {
+    border-bottom-color: var(--text-color);
+    padding-left: 1rem;
+    transition: all 0.3s ease;
+}
+
+.service-card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.service-icon-img {
+    width: 64px;
+    height: 64px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.service-card:hover .service-icon-img {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+.service-icon {
+    display: none;
+}
+
+.service-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0;
+    color: var(--text-color);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+.service-card-header h3 {
+    flex: 1;
+}
+
+.service-card p {
+    color: var(--text-light);
+    line-height: 1.8;
+    font-size: 0.95rem;
+}
+
+/* 会社概要セクション */
+.about {
+    background-color: var(--bg-light);
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    margin: 3rem auto 0;
+}
+
+.company-info {
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 8px;
+    margin-bottom: 3rem;
+    box-shadow: var(--shadow);
+}
+
+.info-row {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 1.5rem;
+    padding: 1.25rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.info-row:last-child {
+    border-bottom: none;
+}
+
+.info-label {
+    font-weight: 600;
+    color: var(--text-color);
+    font-size: 0.95rem;
+}
+
+.info-value {
+    color: var(--text-light);
+    line-height: 1.8;
+    font-size: 0.95rem;
+}
+
+.about-message {
+    margin-top: 2rem;
+}
+
+.about-message h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.01em;
+}
+
+.about-message p {
+    font-size: 1rem;
+    color: var(--text-light);
+    line-height: 1.9;
+    margin-bottom: 1.5rem;
+}
+
+
+/* お問い合わせセクション */
+.contact {
+    background-color: var(--bg-color);
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0;
+    background-color: transparent;
+    padding: 0;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.required {
+    color: #ef4444;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 0.875rem 0;
+    border: none;
+    border-bottom: 1px solid var(--border-color);
+    border-radius: 0;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.2s ease;
+    background: transparent;
+    color: var(--text-color);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--text-light);
+    opacity: 0.6;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-bottom-color: var(--text-color);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%232c3e50' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-right: 1.5rem;
+}
+
+.checkbox-group {
+    margin-top: 1rem;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: auto;
+    margin-top: 0.25rem;
+    cursor: pointer;
+}
+
+.footer-section a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.contact-form .btn {
+    margin-top: 2rem;
+}
+
+/* FAQセクション */
+.faq-section {
+    background-color: var(--bg-color);
+    padding: 100px 0;
+}
+
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--border-color);
+    padding: 2rem 0;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.faq-question:hover h3 {
+    color: var(--text-color);
+}
+
+.faq-question h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin: 0;
+    flex: 1;
+    transition: color 0.2s ease;
+}
+
+.faq-toggle {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--text-light);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-toggle {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px;
+    padding-top: 1.5rem;
+}
+
+.faq-answer p {
+    color: var(--text-light);
+    line-height: 1.8;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* お知らせセクション */
+.news-section {
+    background-color: var(--bg-light);
+    padding: 100px 0;
+}
+
+.news-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.news-item {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 2rem;
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border-color);
+    transition: all 0.2s ease;
+}
+
+.news-item:hover {
+    padding-left: 1rem;
+}
+
+.news-item:last-child {
+    border-bottom: none;
+}
+
+.news-date {
+    font-size: 0.875rem;
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+.news-content h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.news-content p {
+    color: var(--text-light);
+    line-height: 1.8;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* フッター */
+.footer {
+    background-color: var(--bg-dark);
+    color: white;
+    padding: 3rem 0 1.5rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h3,
+.footer-section h4 {
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.footer-section p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.8;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: var(--shadow);
+        padding: 2rem 0;
+        gap: 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-menu li {
+        padding: 1rem 0;
+    }
+
+    .section-title {
+        text-align: center;
+    }
+    
+    .section-subtitle {
+        text-align: center;
+    }
+
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .about-stats {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .stat-number-large {
+        font-size: clamp(1.8rem, 4vw, 2.5rem);
+        white-space: nowrap;
+    }
+
+    .reasons-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cases-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .news-item {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .news-date {
+        font-size: 0.8rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .stat-number-large {
+        font-size: 1.8rem;
+        white-space: nowrap;
+    }
+
+    .reason-card,
+    .testimonial-card {
+        padding: 1.5rem;
+    }
+
+    .contact-form {
+        padding: 1.5rem;
+    }
+}
+
