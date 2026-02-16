@@ -32,15 +32,63 @@
             margin: 0 auto;
         }
         
-        .book-bonus-app {
+        .book-bonus-actions {
             max-width: 900px;
             margin: 0 auto;
-            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            align-items: center;
         }
         
         .book-bonus-link {
             display: inline-block;
-            margin-top: 2rem;
+            min-width: 280px;
+        }
+        
+        .book-bonus-download {
+            max-width: 900px;
+            margin: 3rem auto 0;
+            padding: 2rem;
+            background-color: var(--bg-light);
+            border-radius: 8px;
+            border-left: 4px solid var(--text-color);
+        }
+        
+        .book-bonus-download h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--text-color);
+            margin-bottom: 1rem;
+        }
+        
+        .book-bonus-download p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        
+        .book-bonus-download ol {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.8;
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .book-bonus-download li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .book-bonus-download a {
+            color: var(--text-color);
+            text-decoration: underline;
+            transition: color 0.2s ease;
+        }
+        
+        .book-bonus-download a:hover {
+            color: var(--accent-color);
         }
         
         .book-bonus-note {
@@ -58,6 +106,16 @@
             line-height: 1.8;
             margin: 0;
         }
+        
+        @media (max-width: 768px) {
+            .book-bonus-actions {
+                gap: 1rem;
+            }
+            
+            .book-bonus-link {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -69,12 +127,25 @@
                 <p>本書で解説した考え方を、実際に「触って」確認したい方向けに、読者限定の特典ページを用意しました。<br>そこでは、本書のプロセスをもとに作成したタスク管理アプリを実際に試すことができます。完成度の高い製品ではありませんが、「思考がそのまま仕組みになる」感覚をつかむには十分な内容です。</p>
             </div>
             
-            <div class="book-bonus-app">
-                <a href="https://hiro-lgtm.github.io/task-flow-pro2/" class="btn btn-primary btn-large book-bonus-link" target="_blank" rel="noopener noreferrer">タスク管理アプリを開く</a>
+            <div class="book-bonus-actions">
+                <a href="https://github.com/hiro-lgtm/task-flow-pro2/archive/refs/heads/main.zip" class="btn btn-primary btn-large book-bonus-link" download>ソースコードをダウンロード（ZIP）</a>
+                <a href="https://github.com/hiro-lgtm/task-flow-pro2" class="btn btn-secondary book-bonus-link" target="_blank" rel="noopener noreferrer">GitHubリポジトリを開く</a>
+            </div>
+            
+            <div class="book-bonus-download">
+                <h3>使い方</h3>
+                <p>ダウンロードしたZIPファイルを解凍し、以下の手順で使用できます：</p>
+                <ol>
+                    <li>ZIPファイルをダウンロードして解凍します</li>
+                    <li>解凍したフォルダ内の<code>index.html</code>をブラウザで開きます</li>
+                    <li>すぐにタスク管理アプリとして使用できます</li>
+                    <li>データはブラウザのLocalStorageに保存されます</li>
+                </ol>
+                <p>より詳しい使い方やカスタマイズ方法については、<a href="https://github.com/hiro-lgtm/task-flow-pro2/blob/main/README.md" target="_blank" rel="noopener noreferrer">GitHubリポジトリのREADME</a>をご参照ください。</p>
             </div>
             
             <div class="book-bonus-note">
-                <p><strong>ご注意：</strong>このアプリは本書のプロセスを体験していただくためのデモ版です。実際の業務で使用する場合は、本書の内容を参考に、お客様の環境に合わせてカスタマイズしてください。</p>
+                <p><strong>ご注意：</strong>このアプリは本書のプロセスを体験していただくためのデモ版です。実際の業務で使用する場合は、本書の内容を参考に、お客様の環境に合わせてカスタマイズしてください。ソースコードは自由に改変・再配布可能です。</p>
             </div>
         </div>
     </div>
