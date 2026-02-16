@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="読者限定特典ページ - 本書で解説した考え方を実際に「触って」確認できるタスク管理アプリ">
+    <meta name="robots" content="noindex, nofollow">
+    <title>読者限定特典ページ - Vision Assist Partner</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .book-bonus-content {
+            padding: 100px 0;
+        }
+        
+        .book-bonus-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .book-bonus-header h1 {
+            font-size: clamp(1.75rem, 4vw, 2.25rem);
+            font-weight: 600;
+            color: var(--text-color);
+            margin-bottom: 1rem;
+        }
+        
+        .book-bonus-header p {
+            font-size: 1rem;
+            color: var(--text-light);
+            line-height: 1.8;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .book-bonus-app {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+        
+        .book-bonus-app iframe {
+            width: 100%;
+            height: 800px;
+            min-height: 600px;
+            border: none;
+            border-radius: 4px;
+        }
+        
+        @media (max-width: 768px) {
+            .book-bonus-app iframe {
+                height: 600px;
+            }
+        }
+        
+        .book-bonus-note {
+            max-width: 900px;
+            margin: 2rem auto 0;
+            padding: 1.5rem;
+            background-color: var(--bg-light);
+            border-radius: 8px;
+            border-left: 4px solid var(--text-color);
+        }
+        
+        .book-bonus-note p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.8;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- 特典コンテンツ -->
+    <div class="book-bonus-content">
+        <div class="container">
+            <div class="book-bonus-header">
+                <h1>読者限定特典のご案内</h1>
+                <p>本書で解説した考え方を、実際に「触って」確認したい方向けに、読者限定の特典ページを用意しました。<br>そこでは、本書のプロセスをもとに作成したタスク管理アプリを実際に試すことができます。完成度の高い製品ではありませんが、「思考がそのまま仕組みになる」感覚をつかむには十分な内容です。</p>
+            </div>
+            
+            <div class="book-bonus-app">
+                <iframe src="https://hiro-lgtm.github.io/task-flow-pro2/" title="タスク管理アプリ" allowfullscreen></iframe>
+            </div>
+            
+            <div class="book-bonus-note">
+                <p><strong>ご注意：</strong>このアプリは本書のプロセスを体験していただくためのデモ版です。実際の業務で使用する場合は、本書の内容を参考に、お客様の環境に合わせてカスタマイズしてください。</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

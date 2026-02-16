@@ -40,12 +40,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         if (href.startsWith('#') && href.length > 1) {
             const target = document.querySelector(href);
             if (target) {
-                e.preventDefault();
-                const offsetTop = target.offsetTop - 80; // ナビゲーションバーの高さを考慮
-                window.scrollTo({
-                    top: offsetTop,
-                    behavior: 'smooth'
-                });
+        e.preventDefault();
+            const offsetTop = target.offsetTop - 80; // ナビゲーションバーの高さを考慮
+            window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
+            });
             }
         }
     });
