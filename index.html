@@ -4,877 +4,1265 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="経理・IT・AIを設計して、社長が数字で経営できる状態をつくる。管理部門構築・月次高速化・AI自動化の専門家。上場企業経理出身・外部監査役 川戸浩嗣">
-    <meta name="keywords" content="管理部門構築,経理設計,バックオフィス,AI経理,月次決算早期化,経営管理,川戸浩嗣">
     <meta property="og:title" content="管理部門をつくる人 | 川戸浩嗣 / Vision Assist Partner">
-    <meta property="og:description" content="経理・IT・AIを設計して、社長が数字で経営できる状態をつくる。上場企業経理出身・外部監査役。">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="ja_JP">
     <meta property="og:image" content="https://k-state.jp/images/hero-background.jpg">
     <link rel="canonical" href="https://k-state.jp/">
     <title>管理部門をつくる人 | 川戸浩嗣 / Vision Assist Partner</title>
-    <link rel="stylesheet" href="styles.css">
-    <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#2c3e50">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "管理部門をつくる人 / Vision Assist Partner",
-      "description": "経理・IT・AIを設計して、社長が数字で経営できる状態をつくる。管理部門構築・月次高速化・AI自動化の専門家。",
-      "url": "https://k-state.jp",
-      "email": "info@k-state.jp",
-      "foundingDate": "2022-10",
-      "founder": { "@type": "Person", "name": "川戸浩嗣" },
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "阿倍野区",
-        "addressRegion": "大阪府",
-        "postalCode": "545-0021",
-        "addressCountry": "JP"
-      }
-    }
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;700&family=Noto+Sans+JP:wght@300;400;500;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
     <style>
-        /* 追加スタイル：既存CSSに上書き・追加する最小限の定義 */
+    /* ===== RESET ===== */
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    img{max-width:100%;height:auto;display:block}
 
-        /* ヒーローのチェックリスト */
-        .hero-checklist {
-            list-style: none;
-            margin: 1.5rem 0 2.5rem;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0;
-            max-width: 640px;
-        }
-        .hero-checklist li {
-            display: flex;
-            align-items: flex-start;
-            gap: 0.6rem;
-            font-size: 0.925rem;
-            color: var(--text-color);
-            padding: 0.55rem 0;
-            border-bottom: 1px solid var(--border-color);
-            line-height: 1.5;
-        }
-        .hero-checklist li:nth-last-child(-n+2) { border-bottom: none; }
-        .hero-checklist li::before {
-            content: "□";
-            color: var(--text-light);
-            flex-shrink: 0;
-            margin-top: 1px;
-            font-size: 0.85rem;
-        }
-        .hero-checklist-note {
-            font-size: 0.875rem;
-            color: var(--text-color);
-            font-weight: 500;
-            margin-bottom: 2.5rem;
-        }
-        .hero-checklist-label {
-            font-size: 0.8rem;
-            color: var(--text-light);
-            letter-spacing: 0.08em;
-            font-weight: 500;
-            margin-bottom: 0.75rem;
-            display: block;
-        }
+    /* ===== TOKENS ===== */
+    :root{
+        --ink:       #0e1c16;
+        --ink-mid:   #1c3328;
+        --ink-light: #2d4f3c;
+        --gold:      #b8975a;
+        --gold-lt:   #d4b47a;
+        --cream:     #f6f3ee;
+        --cream-dk:  #ede9e1;
+        --stone:     #8a9490;
+        --border:    #d8d2c8;
+        --white:     #ffffff;
+        --serif:     "Noto Serif JP", "DM Serif Display", serif;
+        --sans:      "Noto Sans JP", sans-serif;
+    }
+    html{scroll-behavior:smooth;scroll-padding-top:72px}
+    body{font-family:var(--sans);background:var(--cream);color:var(--ink);line-height:1.75;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 
-        /* Before/After セクション */
-        .ba-section {
-            background-color: var(--bg-dark);
-            padding: 100px 0;
-        }
-        .ba-section .section-title,
-        .ba-section .section-subtitle { color: white; }
-        .ba-section .section-subtitle { color: rgba(255,255,255,0.6); }
-        .ba-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2px;
-            margin-top: 0;
-        }
-        .ba-col {
-            padding: 2.5rem;
-        }
-        .ba-col.before-col {
-            background: rgba(255,255,255,0.04);
-        }
-        .ba-col.after-col {
-            background: rgba(255,255,255,0.08);
-            border: 1px solid rgba(255,255,255,0.12);
-        }
-        .ba-head {
-            font-size: 0.75rem;
-            letter-spacing: 0.15em;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-        .ba-badge {
-            padding: 0.25rem 0.75rem;
-            border-radius: 2px;
-            font-size: 0.7rem;
-            font-weight: 700;
-            letter-spacing: 0.1em;
-        }
-        .ba-badge.b { background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.5); }
-        .ba-badge.a { background: white; color: var(--text-color); }
-        .ba-head.before-head { color: rgba(255,255,255,0.4); }
-        .ba-head.after-head { color: white; }
-        .ba-items {
-            list-style: none;
-        }
-        .ba-items li {
-            padding: 0.85rem 0;
-            border-bottom: 1px solid rgba(255,255,255,0.07);
-            font-size: 0.925rem;
-            line-height: 1.6;
-            display: flex;
-            align-items: flex-start;
-            gap: 0.75rem;
-        }
-        .ba-items li:last-child { border-bottom: none; }
-        .before-col .ba-items li { color: rgba(255,255,255,0.45); }
-        .before-col .ba-items li::before { content: "×"; color: #e74c3c; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
-        .after-col .ba-items li { color: rgba(255,255,255,0.9); }
-        .after-col .ba-items li::before { content: "✓"; color: white; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+    /* ===== NAV ===== */
+    .nav{
+        position:fixed;top:0;left:0;right:0;z-index:200;
+        height:72px;
+        display:flex;align-items:center;
+        background:rgba(246,243,238,.92);
+        backdrop-filter:blur(12px);
+        border-bottom:1px solid var(--border);
+        transition:box-shadow .3s;
+    }
+    .nav.scrolled{box-shadow:0 2px 20px rgba(14,28,22,.08)}
+    .nav-inner{
+        width:100%;max-width:1280px;margin:0 auto;padding:0 40px;
+        display:flex;align-items:center;justify-content:space-between;
+    }
+    .nav-logo{
+        font-family:var(--serif);font-size:15px;font-weight:500;
+        color:var(--ink);text-decoration:none;letter-spacing:.06em;
+        line-height:1.35;
+    }
+    .nav-logo small{display:block;font-size:10px;font-weight:300;color:var(--stone);letter-spacing:.1em;font-family:var(--sans)}
+    .nav-links{display:flex;gap:32px;list-style:none;align-items:center}
+    .nav-links a{font-size:13px;color:var(--stone);text-decoration:none;letter-spacing:.06em;transition:color .2s;font-weight:400}
+    .nav-links a:hover{color:var(--ink)}
+    .nav-cta{
+        font-size:12px!important;color:var(--ink)!important;
+        border:1px solid var(--ink);padding:9px 20px;border-radius:0;
+        font-weight:500!important;letter-spacing:.08em;
+        transition:all .2s!important;
+    }
+    .nav-cta:hover{background:var(--ink)!important;color:var(--cream)!important}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+    .hamburger span{width:22px;height:1.5px;background:var(--ink);transition:all .3s}
 
-        /* 料金セクション */
-        .pricing-section {
-            background-color: var(--bg-light);
-            padding: 100px 0;
-        }
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        .price-card {
-            background: white;
-            border-radius: 8px;
-            padding: 2.5rem;
-            box-shadow: var(--shadow);
-        }
-        .price-card.featured {
-            border: 2px solid var(--text-color);
-        }
-        .price-badge {
-            font-size: 0.75rem;
-            letter-spacing: 0.1em;
-            font-weight: 600;
-            color: var(--text-light);
-            margin-bottom: 0.75rem;
-            display: block;
-        }
-        .price-card.featured .price-badge {
-            color: var(--text-color);
-        }
-        .price-ttl {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: var(--text-color);
-            margin-bottom: 0.75rem;
-            letter-spacing: -0.01em;
-        }
-        .price-range {
-            font-size: 1.75rem;
-            font-weight: 700;
-            color: var(--text-color);
-            margin-bottom: 0.5rem;
-            letter-spacing: -0.02em;
-        }
-        .price-range span { font-size: 0.95rem; font-weight: 400; color: var(--text-light); }
-        .price-note {
-            font-size: 0.875rem;
-            color: var(--text-light);
-            margin-bottom: 1.75rem;
-            line-height: 1.7;
-        }
-        .price-includes {
-            list-style: none;
-        }
-        .price-includes li {
-            padding: 0.65rem 0;
-            border-bottom: 1px solid var(--border-color);
-            font-size: 0.925rem;
-            color: var(--text-color);
-            display: flex;
-            align-items: flex-start;
-            gap: 0.6rem;
-            line-height: 1.5;
-        }
-        .price-includes li:last-child { border-bottom: none; }
-        .price-includes li::before { content: "—"; color: var(--text-light); flex-shrink: 0; }
+    /* ===== HERO ===== */
+    .hero{
+        min-height:100vh;
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        padding-top:72px;
+        overflow:hidden;
+    }
+    .hero-left{
+        display:flex;flex-direction:column;justify-content:center;
+        padding:80px 60px 80px 40px;
+        max-width:680px;
+        position:relative;z-index:1;
+    }
+    .hero-left::after{
+        content:"";position:absolute;right:-1px;top:15%;bottom:15%;
+        width:1px;background:linear-gradient(to bottom,transparent,var(--border) 30%,var(--border) 70%,transparent);
+    }
+    .hero-right{
+        position:relative;overflow:hidden;
+        background:var(--ink);
+    }
+    .hero-right-img{
+        width:100%;height:100%;
+        object-fit:cover;opacity:.55;
+        filter:sepia(.2) contrast(1.1);
+    }
+    .hero-right-overlay{
+        position:absolute;inset:0;
+        background:linear-gradient(135deg,rgba(14,28,22,.7) 0%,rgba(14,28,22,.2) 100%);
+    }
+    .hero-right-text{
+        position:absolute;bottom:48px;left:48px;right:48px;
+        color:rgba(255,255,255,.7);
+        font-size:12px;letter-spacing:.12em;
+        font-family:var(--sans);font-weight:300;
+        border-left:1px solid rgba(255,255,255,.3);
+        padding-left:16px;
+        line-height:1.8;
+    }
+    .hero-eyebrow{
+        font-size:11px;letter-spacing:.2em;color:var(--gold);
+        font-weight:500;margin-bottom:28px;
+        display:flex;align-items:center;gap:12px;
+        font-family:var(--sans);
+    }
+    .hero-eyebrow::before{content:"";width:32px;height:1px;background:var(--gold)}
+    .hero-title{
+        font-family:var(--serif);
+        font-size:clamp(38px,4.5vw,60px);
+        font-weight:400;
+        color:var(--ink);
+        line-height:1.25;
+        letter-spacing:-.01em;
+        margin-bottom:10px;
+    }
+    .hero-title em{font-style:italic;color:var(--gold)}
+    .hero-title-sub{
+        font-family:var(--serif);
+        font-size:clamp(14px,1.5vw,18px);
+        font-weight:300;color:var(--stone);
+        margin-bottom:44px;letter-spacing:.02em;line-height:1.7;
+    }
+    .hero-checks{
+        list-style:none;margin-bottom:44px;
+        border-top:1px solid var(--border);
+    }
+    .hero-checks li{
+        display:flex;align-items:flex-start;gap:12px;
+        font-size:13.5px;color:var(--ink);
+        padding:11px 0;border-bottom:1px solid var(--border);
+        line-height:1.55;
+    }
+    .hero-checks li::before{
+        content:"";width:6px;height:6px;border-radius:50%;
+        background:var(--gold);flex-shrink:0;margin-top:5px;
+    }
+    .hero-checks-note{
+        font-size:13px;color:var(--gold);font-weight:500;
+        margin-bottom:40px;letter-spacing:.03em;
+    }
+    .hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+    .btn-fill{
+        display:inline-flex;align-items:center;gap:8px;
+        background:var(--ink);color:var(--cream);
+        padding:15px 32px;font-size:14px;font-weight:500;
+        letter-spacing:.06em;text-decoration:none;
+        border:1px solid var(--ink);transition:all .25s;
+        font-family:var(--sans);
+    }
+    .btn-fill:hover{background:var(--ink-mid);transform:translateY(-1px)}
+    .btn-line{
+        display:inline-flex;align-items:center;gap:8px;
+        background:transparent;color:var(--ink);
+        padding:15px 28px;font-size:13px;font-weight:400;
+        letter-spacing:.06em;text-decoration:none;
+        border:1px solid var(--border);transition:all .25s;
+        font-family:var(--sans);
+    }
+    .btn-line:hover{border-color:var(--ink);background:rgba(14,28,22,.04)}
 
-        /* 役割セクション */
-        .roles-section {
-            background-color: var(--bg-color);
-            padding: 100px 0;
-        }
-        .roles-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 0;
-            border: 1px solid var(--border-color);
-        }
-        .role-card {
-            padding: 2.5rem;
-            border-right: 1px solid var(--border-color);
-            border-bottom: 1px solid var(--border-color);
-            transition: background 0.2s ease;
-        }
-        .role-card:nth-child(2n) { border-right: none; }
-        .role-card:nth-last-child(-n+2) { border-bottom: none; }
-        .role-card:hover { background: var(--bg-light); }
-        .role-num {
-            font-size: 0.75rem;
-            color: var(--text-light);
-            letter-spacing: 0.15em;
-            font-weight: 500;
-            margin-bottom: 1rem;
-            display: block;
-        }
-        .role-ttl {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: var(--text-color);
-            margin-bottom: 0.875rem;
-            letter-spacing: -0.01em;
-            line-height: 1.4;
-        }
-        .role-desc {
-            font-size: 0.925rem;
-            color: var(--text-light);
-            line-height: 1.85;
-            margin-bottom: 1.25rem;
-        }
-        .role-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.4rem;
-        }
-        .role-tag {
-            font-size: 0.75rem;
-            padding: 0.25rem 0.6rem;
-            background: var(--bg-light);
-            color: var(--text-light);
-            border-radius: 2px;
-            border: 1px solid var(--border-color);
-        }
+    /* ===== STATS BAR ===== */
+    .stats-bar{
+        background:var(--ink);
+        padding:0;
+    }
+    .stats-inner{
+        max-width:1280px;margin:0 auto;
+        display:grid;grid-template-columns:repeat(4,1fr);
+    }
+    .stat-item{
+        padding:36px 40px;
+        border-right:1px solid rgba(255,255,255,.08);
+        text-align:center;
+    }
+    .stat-item:last-child{border-right:none}
+    .stat-num{
+        font-family:var(--serif);
+        font-size:clamp(28px,3vw,40px);
+        font-weight:400;color:var(--gold);
+        line-height:1;margin-bottom:8px;letter-spacing:-.02em;
+    }
+    .stat-lbl{font-size:11px;color:rgba(255,255,255,.5);letter-spacing:.1em;font-weight:300}
 
-        /* 差別化ポイント（選ばれる理由の置き換え） */
-        .diff-section {
-            background-color: var(--bg-light);
-            padding: 100px 0;
-        }
+    /* ===== SECTION SHARED ===== */
+    .sec{padding:100px 0}
+    .sec-inner{max-width:1280px;margin:0 auto;padding:0 40px}
+    .sec-label{
+        font-size:10px;letter-spacing:.25em;color:var(--gold);
+        font-weight:500;margin-bottom:16px;display:flex;align-items:center;gap:12px;
+        font-family:var(--sans);
+    }
+    .sec-label::before{content:"";width:24px;height:1px;background:var(--gold)}
+    .sec-title{
+        font-family:var(--serif);
+        font-size:clamp(26px,3.5vw,42px);
+        font-weight:400;line-height:1.3;letter-spacing:-.01em;
+        margin-bottom:48px;
+    }
+    .sec-title.light{color:var(--white)}
+    .sec-title.dark{color:var(--ink)}
 
-        /* プロフィール強化 */
-        .profile-role-tag {
-            display: inline-block;
-            font-size: 0.8rem;
-            padding: 0.3rem 0.75rem;
-            border: 1px solid var(--border-color);
-            border-radius: 2px;
-            color: var(--text-light);
-            margin: 0.25rem;
-        }
+    /* ===== ROLES ===== */
+    .roles-sec{background:var(--cream)}
+    .roles-intro{
+        max-width:560px;font-size:15px;color:var(--stone);
+        line-height:1.9;margin-bottom:56px;
+    }
+    .roles-grid{
+        display:grid;grid-template-columns:repeat(2,1fr);
+        gap:1px;background:var(--border);
+    }
+    .role-card{
+        background:var(--cream);padding:44px 40px;
+        transition:background .2s;position:relative;overflow:hidden;
+    }
+    .role-card::after{
+        content:"";position:absolute;bottom:0;left:0;right:0;
+        height:2px;background:var(--gold);transform:scaleX(0);
+        transform-origin:left;transition:transform .3s ease;
+    }
+    .role-card:hover{background:var(--white)}
+    .role-card:hover::after{transform:scaleX(1)}
+    .role-num{
+        font-family:"DM Serif Display",var(--serif);
+        font-size:56px;color:var(--border);font-weight:400;
+        line-height:1;margin-bottom:20px;letter-spacing:-.03em;
+        display:block;
+    }
+    .role-ttl{
+        font-family:var(--serif);font-size:19px;font-weight:500;
+        color:var(--ink);margin-bottom:14px;line-height:1.4;
+    }
+    .role-desc{font-size:13.5px;color:var(--stone);line-height:1.9;margin-bottom:20px}
+    .role-tags{display:flex;flex-wrap:wrap;gap:6px}
+    .role-tag{
+        font-size:11px;padding:4px 10px;
+        border:1px solid var(--border);color:var(--stone);
+        letter-spacing:.04em;
+    }
 
-        @media (max-width: 768px) {
-            .hero-checklist { grid-template-columns: 1fr; }
-            .ba-grid { grid-template-columns: 1fr; }
-            .pricing-grid { grid-template-columns: 1fr; }
-            .roles-grid { grid-template-columns: 1fr; }
-            .role-card { border-right: none; }
-            .role-card:nth-last-child(-n+2) { border-bottom: 1px solid var(--border-color); }
-            .role-card:last-child { border-bottom: none; }
+    /* ===== BEFORE / AFTER ===== */
+    .ba-sec{background:var(--ink-mid);padding:100px 0}
+    .ba-grid{
+        display:grid;grid-template-columns:1fr 1fr;
+        gap:2px;background:rgba(255,255,255,.06);
+        margin-top:56px;
+    }
+    .ba-col{padding:48px 44px}
+    .ba-col.b{background:rgba(255,255,255,.02)}
+    .ba-col.a{background:rgba(184,151,90,.06)}
+    .ba-head{
+        font-size:11px;letter-spacing:.2em;font-weight:500;
+        margin-bottom:28px;display:flex;align-items:center;gap:10px;
+    }
+    .ba-badge{padding:4px 12px;font-size:10px;font-weight:600;letter-spacing:.1em}
+    .ba-badge.b{background:rgba(255,255,255,.08);color:rgba(255,255,255,.4)}
+    .ba-badge.a{background:var(--gold);color:var(--ink)}
+    .ba-head.bh{color:rgba(255,255,255,.35)}
+    .ba-head.ah{color:rgba(255,255,255,.8)}
+    .ba-list{list-style:none}
+    .ba-list li{
+        padding:14px 0;border-bottom:1px solid rgba(255,255,255,.06);
+        font-size:14px;line-height:1.65;
+        display:flex;align-items:flex-start;gap:12px;
+    }
+    .ba-list li:last-child{border-bottom:none}
+    .b .ba-list li{color:rgba(255,255,255,.35)}
+    .b .ba-list li::before{content:"—";color:rgba(255,255,255,.2);flex-shrink:0;margin-top:1px}
+    .a .ba-list li{color:rgba(255,255,255,.85)}
+    .a .ba-list li::before{content:"✓";color:var(--gold);font-weight:600;flex-shrink:0;margin-top:1px}
+
+    /* ===== SERVICES ===== */
+    .svc-sec{background:var(--cream-dk)}
+    .svc-grid{display:grid;grid-template-columns:1fr;border-top:1px solid var(--border)}
+    .svc-row{
+        display:grid;grid-template-columns:80px 1fr 280px;
+        gap:0;border-bottom:1px solid var(--border);
+        padding:36px 0;align-items:start;
+        transition:background .2s;cursor:default;
+    }
+    .svc-row:hover{background:rgba(184,151,90,.04)}
+    .svc-num{
+        font-family:"DM Serif Display",var(--serif);
+        font-size:32px;color:var(--border);font-weight:400;
+        padding-top:2px;letter-spacing:-.02em;
+    }
+    .svc-body{padding-right:48px}
+    .svc-ttl{
+        font-family:var(--serif);font-size:18px;font-weight:500;
+        color:var(--ink);margin-bottom:10px;line-height:1.4;
+    }
+    .svc-desc{font-size:13.5px;color:var(--stone);line-height:1.85}
+    .svc-meta{
+        padding-top:4px;text-align:right;
+        font-size:12px;color:var(--stone);line-height:1.9;
+    }
+    .svc-meta strong{display:block;color:var(--ink);font-size:13px;font-weight:500;margin-bottom:4px}
+
+    /* ===== CASES ===== */
+    .cases-sec{background:var(--cream)}
+    .cases-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border)}
+    .case-card{
+        background:var(--cream);overflow:hidden;
+        transition:background .2s;
+        display:flex;flex-direction:column;
+    }
+    .case-card:hover{background:var(--white)}
+    .case-img{
+        width:100%;height:200px;overflow:hidden;
+        background:var(--ink-mid);flex-shrink:0;
+    }
+    .case-img img{
+        width:100%;height:100%;object-fit:cover;
+        filter:grayscale(.3);transition:filter .4s,transform .4s;
+    }
+    .case-card:hover .case-img img{filter:grayscale(0);transform:scale(1.03)}
+    .case-body{padding:32px 28px;flex:1;display:flex;flex-direction:column}
+    .case-cat{
+        font-size:10px;letter-spacing:.15em;color:var(--gold);
+        font-weight:500;margin-bottom:12px;font-family:var(--sans);
+    }
+    .case-ttl{
+        font-family:var(--serif);font-size:16px;font-weight:500;
+        color:var(--ink);margin-bottom:16px;line-height:1.5;
+    }
+    .case-ba{flex:1}
+    .case-ba-row{display:flex;gap:10px;font-size:13px;margin-bottom:10px;line-height:1.55;align-items:flex-start}
+    .lbl{
+        font-size:10px;font-weight:600;padding:2px 8px;
+        flex-shrink:0;margin-top:2px;letter-spacing:.06em;
+    }
+    .lbl-b{background:#f0e8e8;color:#9b3a3a}
+    .lbl-a{background:#e8f0ec;color:#2d6b4a}
+    .case-result{
+        font-size:13px;font-weight:600;color:var(--ink);
+        padding-top:16px;margin-top:auto;
+        border-top:1px solid var(--border);
+        font-family:var(--serif);
+    }
+
+    /* ===== WHY ===== */
+    .why-sec{background:var(--ink)}
+    .why-grid{
+        display:grid;grid-template-columns:repeat(2,1fr);
+        gap:1px;background:rgba(255,255,255,.07);
+        margin-top:56px;
+    }
+    .why-card{
+        background:var(--ink);padding:44px 40px;
+        transition:background .2s;
+    }
+    .why-card:hover{background:var(--ink-mid)}
+    .why-icon{
+        width:48px;height:48px;margin-bottom:24px;
+        border:1px solid rgba(184,151,90,.4);
+        display:flex;align-items:center;justify-content:center;
+        color:var(--gold);font-size:20px;
+    }
+    .why-ttl{
+        font-family:var(--serif);font-size:17px;font-weight:400;
+        color:var(--white);margin-bottom:12px;line-height:1.4;
+    }
+    .why-desc{font-size:13.5px;color:rgba(255,255,255,.45);line-height:1.85}
+
+    /* ===== PROFILE ===== */
+    .profile-sec{background:var(--cream-dk)}
+    .profile-grid{
+        display:grid;grid-template-columns:380px 1fr;
+        gap:80px;align-items:start;
+    }
+    .profile-left{position:sticky;top:88px}
+    .profile-photo-wrap{
+        width:100%;aspect-ratio:4/5;
+        background:var(--ink-light);overflow:hidden;
+        margin-bottom:28px;position:relative;
+    }
+    .profile-photo-wrap img{width:100%;height:100%;object-fit:cover}
+    .profile-photo-placeholder{
+        position:absolute;inset:0;
+        display:flex;flex-direction:column;align-items:center;justify-content:center;
+        gap:12px;
+    }
+    .profile-name{
+        font-family:var(--serif);font-size:22px;font-weight:400;
+        color:var(--ink);margin-bottom:4px;letter-spacing:.02em;
+    }
+    .profile-kana{font-size:12px;color:var(--stone);margin-bottom:16px;letter-spacing:.06em}
+    .profile-role-box{
+        padding:14px 18px;background:var(--ink);
+        font-size:13px;color:rgba(255,255,255,.8);
+        line-height:1.7;margin-bottom:20px;
+        border-left:2px solid var(--gold);
+    }
+    .profile-tags{display:flex;flex-wrap:wrap;gap:6px}
+    .profile-tag{
+        font-size:11px;padding:4px 10px;
+        border:1px solid var(--border);color:var(--stone);letter-spacing:.04em;
+    }
+    .career-label{
+        font-size:10px;letter-spacing:.22em;color:var(--gold);
+        font-weight:500;margin-bottom:20px;display:flex;align-items:center;gap:10px;
+        font-family:var(--sans);
+    }
+    .career-label::before{content:"";width:20px;height:1px;background:var(--gold)}
+    .career-list{list-style:none;margin-bottom:44px}
+    .career-item{
+        display:grid;grid-template-columns:96px 1fr;
+        gap:20px;padding:20px 0;border-bottom:1px solid var(--border);
+    }
+    .career-year{font-size:12px;color:var(--stone);padding-top:2px;letter-spacing:.04em;line-height:1.6}
+    .career-desc{font-size:14px;color:var(--ink);line-height:1.8}
+    .diff-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .diff-card{
+        background:var(--cream);border:1px solid var(--border);
+        padding:22px 20px;
+    }
+    .diff-card h4{
+        font-family:var(--serif);font-size:14px;font-weight:500;
+        color:var(--ink);margin-bottom:8px;line-height:1.4;
+    }
+    .diff-card p{font-size:13px;color:var(--stone);line-height:1.75}
+
+    /* ===== PRICING ===== */
+    .pricing-sec{background:var(--cream)}
+    .pricing-grid{
+        display:grid;grid-template-columns:1fr 1fr;
+        gap:2px;background:var(--border);
+        max-width:900px;
+    }
+    .price-card{background:var(--white);padding:44px 40px}
+    .price-card.featured{background:var(--ink)}
+    .price-badge{
+        font-size:10px;letter-spacing:.18em;color:var(--stone);
+        font-weight:500;margin-bottom:14px;display:block;
+    }
+    .price-card.featured .price-badge{color:var(--gold)}
+    .price-ttl{
+        font-family:var(--serif);font-size:20px;font-weight:400;
+        color:var(--ink);margin-bottom:12px;
+    }
+    .price-card.featured .price-ttl{color:var(--white)}
+    .price-num{
+        font-family:"DM Serif Display",var(--serif);
+        font-size:32px;font-weight:400;color:var(--ink);
+        margin-bottom:6px;letter-spacing:-.02em;
+    }
+    .price-card.featured .price-num{color:var(--gold)}
+    .price-num span{font-size:14px;font-weight:300;color:var(--stone);font-family:var(--sans)}
+    .price-note{
+        font-size:13px;color:var(--stone);
+        margin-bottom:28px;line-height:1.8;padding-bottom:24px;
+        border-bottom:1px solid var(--border);
+    }
+    .price-card.featured .price-note{border-color:rgba(255,255,255,.1)}
+    .price-list{list-style:none}
+    .price-list li{
+        padding:10px 0;border-bottom:1px solid var(--border);
+        font-size:13.5px;color:var(--ink);
+        display:flex;align-items:flex-start;gap:10px;line-height:1.5;
+    }
+    .price-card.featured .price-list li{color:rgba(255,255,255,.75);border-color:rgba(255,255,255,.08)}
+    .price-list li:last-child{border-bottom:none}
+    .price-list li::before{content:"—";color:var(--gold);flex-shrink:0}
+
+    /* ===== PROCESS ===== */
+    .process-sec{background:var(--cream-dk)}
+    .process-grid{
+        display:grid;grid-template-columns:repeat(4,1fr);
+        gap:1px;background:var(--border);margin-top:56px;
+    }
+    .process-step{background:var(--cream-dk);padding:36px 28px}
+    .step-n{
+        font-family:"DM Serif Display",var(--serif);
+        font-size:44px;color:var(--border);font-weight:400;
+        line-height:1;margin-bottom:20px;letter-spacing:-.03em;
+    }
+    .step-ttl{
+        font-family:var(--serif);font-size:15px;font-weight:500;
+        color:var(--ink);margin-bottom:10px;
+    }
+    .step-desc{font-size:13px;color:var(--stone);line-height:1.85}
+    .step-badge{
+        display:inline-block;margin-top:16px;
+        font-size:11px;color:var(--gold);
+        border:1px solid rgba(184,151,90,.4);
+        padding:4px 12px;letter-spacing:.06em;
+    }
+
+    /* ===== FAQ ===== */
+    .faq-sec{background:var(--white)}
+    .faq-wrap{max-width:760px}
+    .faq-item{border-bottom:1px solid var(--border)}
+    .faq-q{
+        padding:24px 0;cursor:pointer;
+        display:flex;justify-content:space-between;align-items:center;
+        font-family:var(--serif);font-size:16px;font-weight:400;
+        color:var(--ink);gap:16px;user-select:none;
+    }
+    .faq-q::after{
+        content:"+";font-size:24px;color:var(--gold);
+        flex-shrink:0;transition:transform .3s;font-weight:300;
+        font-family:var(--sans);line-height:1;
+    }
+    .faq-item.open .faq-q::after{transform:rotate(45deg)}
+    .faq-a{
+        display:none;padding:0 0 24px;
+        font-size:14px;color:var(--stone);line-height:1.9;
+    }
+    .faq-item.open .faq-a{display:block}
+
+    /* ===== CTA ===== */
+    .cta-sec{
+        background:var(--ink);padding:100px 0;
+        position:relative;overflow:hidden;
+    }
+    .cta-sec::before{
+        content:"";position:absolute;
+        top:-200px;right:-200px;
+        width:600px;height:600px;
+        border-radius:50%;
+        background:radial-gradient(circle,rgba(184,151,90,.08) 0%,transparent 70%);
+    }
+    .cta-grid{
+        display:grid;grid-template-columns:1fr 480px;
+        gap:80px;align-items:start;
+        position:relative;z-index:1;
+    }
+    .cta-left{}
+    .cta-ttl{
+        font-family:var(--serif);
+        font-size:clamp(28px,3.5vw,44px);
+        font-weight:400;color:var(--white);
+        line-height:1.35;margin-bottom:16px;letter-spacing:-.01em;
+    }
+    .cta-ttl em{font-style:italic;color:var(--gold)}
+    .cta-sub{font-size:15px;color:rgba(255,255,255,.5);line-height:1.85;margin-bottom:40px}
+    .cta-points{list-style:none}
+    .cta-points li{
+        padding:12px 0;border-bottom:1px solid rgba(255,255,255,.07);
+        font-size:14px;color:rgba(255,255,255,.65);
+        display:flex;align-items:center;gap:12px;
+    }
+    .cta-points li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--gold);flex-shrink:0}
+    .cta-form-box{
+        background:rgba(255,255,255,.04);
+        border:1px solid rgba(255,255,255,.1);
+        padding:40px 36px;
+    }
+    .cta-form-ttl{
+        font-family:var(--serif);font-size:18px;font-weight:400;
+        color:var(--white);margin-bottom:6px;
+    }
+    .cta-form-sub{font-size:12px;color:rgba(255,255,255,.4);margin-bottom:28px;letter-spacing:.04em}
+    .form-grp{margin-bottom:20px}
+    .form-grp label{
+        display:block;font-size:11px;letter-spacing:.1em;
+        color:rgba(255,255,255,.4);margin-bottom:8px;font-weight:500;
+    }
+    .form-grp input,.form-grp select,.form-grp textarea{
+        width:100%;padding:12px 0;
+        background:transparent;
+        border:none;border-bottom:1px solid rgba(255,255,255,.15);
+        color:var(--white);font-size:14px;font-family:var(--sans);
+        outline:none;transition:border-color .2s;
+    }
+    .form-grp input::placeholder,.form-grp textarea::placeholder{color:rgba(255,255,255,.2)}
+    .form-grp input:focus,.form-grp select:focus,.form-grp textarea:focus{border-bottom-color:var(--gold)}
+    .form-grp select option{background:var(--ink);color:var(--white)}
+    .form-submit{
+        width:100%;padding:16px;
+        background:var(--gold);color:var(--ink);
+        font-size:14px;font-weight:600;
+        border:none;cursor:pointer;font-family:var(--sans);
+        letter-spacing:.08em;transition:all .2s;margin-top:8px;
+    }
+    .form-submit:hover{background:var(--gold-lt);transform:translateY(-1px)}
+    .form-privacy{font-size:11px;color:rgba(255,255,255,.3);margin-top:14px;text-align:center;line-height:1.7}
+    .form-privacy a{color:rgba(255,255,255,.3)}
+
+    /* ===== FOOTER ===== */
+    footer{background:#070f0b;padding:56px 0 28px}
+    .footer-inner{
+        max-width:1280px;margin:0 auto;padding:0 40px;
+        display:grid;grid-template-columns:1fr auto;
+        gap:60px;padding-bottom:40px;
+        border-bottom:1px solid rgba(255,255,255,.06);
+        margin-bottom:24px;
+    }
+    .footer-brand-name{
+        font-family:var(--serif);font-size:16px;color:rgba(255,255,255,.8);
+        font-weight:400;margin-bottom:10px;line-height:1.5;
+    }
+    .footer-brand-desc{font-size:13px;color:rgba(255,255,255,.3);line-height:1.8;max-width:300px}
+    .footer-links{display:flex;gap:60px}
+    .footer-col h4{
+        font-size:10px;letter-spacing:.2em;color:rgba(255,255,255,.4);
+        font-weight:500;margin-bottom:16px;
+    }
+    .footer-col ul{list-style:none}
+    .footer-col li{margin-bottom:10px}
+    .footer-col a{font-size:13px;color:rgba(255,255,255,.3);text-decoration:none;transition:color .2s}
+    .footer-col a:hover{color:rgba(255,255,255,.7)}
+    .footer-copy{
+        max-width:1280px;margin:0 auto;padding:0 40px;
+        font-size:11px;color:rgba(255,255,255,.15);
+    }
+
+    /* ===== DIVIDER ===== */
+    .divider{width:100%;height:1px;background:linear-gradient(to right,transparent,var(--border) 20%,var(--border) 80%,transparent)}
+
+    /* ===== RESPONSIVE ===== */
+    @media(max-width:1024px){
+        .hero{grid-template-columns:1fr}
+        .hero-right{display:none}
+        .hero-left{max-width:none;padding:80px 40px}
+        .hero-left::after{display:none}
+        .profile-grid{grid-template-columns:1fr}
+        .profile-left{position:static}
+        .cta-grid{grid-template-columns:1fr}
+        .svc-row{grid-template-columns:60px 1fr}
+        .svc-meta{display:none}
+    }
+    @media(max-width:768px){
+        .nav-inner{padding:0 20px}
+        .nav-links{display:none}
+        .hamburger{display:flex}
+        .nav-menu-open .nav-links{
+            display:flex;flex-direction:column;
+            position:fixed;top:72px;left:0;right:0;
+            background:var(--cream);padding:20px;
+            border-bottom:1px solid var(--border);
+            gap:0;z-index:199;
         }
+        .nav-menu-open .nav-links li{border-bottom:1px solid var(--border)}
+        .nav-menu-open .nav-links a{display:block;padding:14px 0;font-size:15px;color:var(--ink)}
+        .hero-left{padding:60px 20px}
+        .hero-checks{margin-bottom:28px}
+        .hero-title{font-size:36px}
+        .sec-inner{padding:0 20px}
+        .stats-inner{grid-template-columns:repeat(2,1fr)}
+        .stat-item{padding:28px 20px}
+        .roles-grid,.ba-grid,.why-grid,.diff-grid,.cases-grid,.pricing-grid,.process-grid{grid-template-columns:1fr}
+        .svc-row{grid-template-columns:1fr;gap:8px}
+        .svc-num{font-size:20px}
+        .footer-inner{grid-template-columns:1fr;gap:40px}
+        .footer-links{flex-direction:column;gap:32px}
+        .cta-form-box{padding:28px 20px}
+        .sec{padding:72px 0}
+    }
     </style>
 </head>
 <body>
-    <!-- ナビゲーション -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-wrapper">
-                <div class="logo">
-                    <a href="#home">管理部門をつくる人</a>
+
+<!-- NAV -->
+<nav class="nav" id="mainNav">
+    <div class="nav-inner">
+        <a href="#home" class="nav-logo">
+            管理部門をつくる人
+            <small>川戸浩嗣 / Vision Assist Partner</small>
+        </a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#what">できること</a></li>
+            <li><a href="#services">サービス</a></li>
+            <li><a href="#cases">事例</a></li>
+            <li><a href="#profile">プロフィール</a></li>
+            <li><a href="#contact" class="nav-cta">無料相談</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="hero">
+    <div class="hero-left">
+        <span class="hero-eyebrow">上場企業経理出身 ｜ 外部監査役 ｜ AI経理設計士</span>
+        <h1 class="hero-title">
+            管理部門を、<br>
+            <em>ゼロからつくる。</em>
+        </h1>
+        <p class="hero-title-sub">経理・IT・AIを設計して、<br>社長が数字で経営できる状態をつくる</p>
+        <ul class="hero-checks">
+            <li>月次の数字が出るのが翌月末近く</li>
+            <li>経理業務が特定の人に属人化している</li>
+            <li>売上はわかるが、利益の構造が見えない</li>
+            <li>会計ソフトを入れたが使いこなせていない</li>
+            <li>社長が経理・総務・労務を全部やっている</li>
+            <li>数字は税理士任せで自分では判断できない</li>
+        </ul>
+        <p class="hero-checks-note">→ 1つでも当てはまるなら、管理部門の設計が必要です。</p>
+        <div class="hero-btns">
+            <a href="#contact" class="btn-fill">まず無料相談を予約する →</a>
+            <a href="#what" class="btn-line">できることを見る</a>
+        </div>
+    </div>
+    <div class="hero-right">
+        <img src="images/hero-background.jpg" alt="" class="hero-right-img">
+        <div class="hero-right-overlay"></div>
+        <div class="hero-right-text">
+            上場企業水準の経営管理を、<br>中小企業に届ける。
+        </div>
+    </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+    <div class="stats-inner">
+        <div class="stat-item">
+            <div class="stat-num">30<span style="font-size:20px">+</span></div>
+            <div class="stat-lbl">支援実績企業数</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-num">10<span style="font-size:16px;font-family:var(--sans)">日以内</span></div>
+            <div class="stat-lbl">月次早期化の目標</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-num">60<span style="font-size:20px">%</span></div>
+            <div class="stat-lbl">経理工数削減の目安</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-num">800<span style="font-size:16px;font-family:var(--sans)">万円</span></div>
+            <div class="stat-lbl">助成金取得実績（最大）</div>
+        </div>
+    </div>
+</div>
+
+<!-- WHAT I DO -->
+<section id="what" class="sec roles-sec">
+    <div class="sec-inner">
+        <span class="sec-label">WHAT I DO</span>
+        <h2 class="sec-title dark">4つの役割で、<br>管理部門を設計する</h2>
+        <p class="roles-intro">単発の課題解決ではなく、会社全体の管理部門を設計して「自社で回り続ける状態」をつくることを目的にしています。</p>
+        <div class="roles-grid">
+            <div class="role-card">
+                <span class="role-num">01</span>
+                <div class="role-ttl">管理部門をゼロから作る</div>
+                <div class="role-desc">「経理担当がいない」「社長が全部やっている」状態から脱却。業務フローの設計・ツール選定・担当者の採用・育成まで一気通貫で支援。自社で回り続ける体制をつくる。</div>
+                <div class="role-tags">
+                    <span class="role-tag">業務フロー設計</span>
+                    <span class="role-tag">ツール選定</span>
+                    <span class="role-tag">担当者育成</span>
+                    <span class="role-tag">内製化支援</span>
                 </div>
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="#what" class="nav-link">できること</a></li>
-                    <li><a href="#services" class="nav-link">サービス</a></li>
-                    <li><a href="#cases" class="nav-link">事例</a></li>
-                    <li><a href="#about" class="nav-link">プロフィール</a></li>
-                    <li><a href="#contact" class="nav-link">無料相談</a></li>
+            </div>
+            <div class="role-card">
+                <span class="role-num">02</span>
+                <div class="role-ttl">数字で経営判断できる状態にする</div>
+                <div class="role-desc">事業別・商品別の粗利・固定費・キャッシュフローを可視化。「なんとなく黒字」から「どこで稼いでいるかわかる」経営に変える。月次を翌月10日以内に締めることを最初の目標にする。</div>
+                <div class="role-tags">
+                    <span class="role-tag">管理会計</span>
+                    <span class="role-tag">月次高速化</span>
+                    <span class="role-tag">KPI設計</span>
+                    <span class="role-tag">経営ダッシュボード</span>
+                </div>
+            </div>
+            <div class="role-card">
+                <span class="role-num">03</span>
+                <div class="role-ttl">経理×AIで業務を自動化する</div>
+                <div class="role-desc">領収書OCR・仕訳自動提案・月次レポート自動生成・支払期日アラートなど、AIを使って「人がやらなくていい仕事」を設計して取り除く。ツールを入れるだけでなく、業務フローに組み込むところまでやる。</div>
+                <div class="role-tags">
+                    <span class="role-tag">仕訳自動化</span>
+                    <span class="role-tag">OCR活用</span>
+                    <span class="role-tag">レポート自動生成</span>
+                    <span class="role-tag">AI業務設計</span>
+                </div>
+            </div>
+            <div class="role-card">
+                <span class="role-num">04</span>
+                <div class="role-ttl">バックオフィス全体を設計する</div>
+                <div class="role-desc">経理だけでなく、総務・労務・IT環境・社内ルールを含めた管理部門全体を俯瞰して設計する。「ツールが連携していない」「誰が何を管理しているかわからない」状態を整理し、全体が噛み合う状態にする。</div>
+                <div class="role-tags">
+                    <span class="role-tag">バックオフィス設計</span>
+                    <span class="role-tag">ツール連携</span>
+                    <span class="role-tag">社内ルール整備</span>
+                    <span class="role-tag">労務管理</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- BEFORE / AFTER -->
+<section class="sec ba-sec">
+    <div class="sec-inner">
+        <span class="sec-label" style="color:rgba(184,151,90,.8)">BEFORE / AFTER</span>
+        <h2 class="sec-title light">支援前と支援後で、<br>何が変わるか</h2>
+        <div class="ba-grid">
+            <div class="ba-col b">
+                <div class="ba-head bh"><span class="ba-badge b">BEFORE</span>支援前の状態</div>
+                <ul class="ba-list">
+                    <li>月次の締めが翌月20〜末日で、常に1ヶ月前の数字で動いている</li>
+                    <li>売上は把握しているが、利益の構造・原価・固定費の内訳が見えていない</li>
+                    <li>経理業務が特定の人に集中していて、その人が休めない</li>
+                    <li>会計ソフトはあるが手入力が多く、月末に仕訳をまとめて入力している</li>
+                    <li>資金繰りの先が読めず、銀行残高を見て判断している</li>
+                    <li>税理士には申告をお願いしているが、経営の相談はできていない</li>
                 </ul>
-                <div class="hamburger" id="hamburger">
-                    <span></span><span></span><span></span>
+            </div>
+            <div class="ba-col a">
+                <div class="ba-head ah"><span class="ba-badge a">AFTER</span>設計後の状態</div>
+                <ul class="ba-list">
+                    <li>翌月8〜10日に月次が確定し、当月の経営判断に使える数字が手元にある</li>
+                    <li>事業別・商品別の粗利が見えて、どこで稼いでいるかを数字で説明できる</li>
+                    <li>業務フローが整備されて、担当者が変わっても回る仕組みになっている</li>
+                    <li>領収書・請求書の処理が自動化されて、経理の手作業が大幅に減っている</li>
+                    <li>3ヶ月先までのキャッシュフロー予測が常に更新されて、先手で動ける</li>
+                    <li>月次レポートをもとに、具体的な経営判断の議論ができるようになっている</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="sec svc-sec">
+    <div class="sec-inner">
+        <span class="sec-label">SERVICES</span>
+        <h2 class="sec-title dark">サービスメニュー</h2>
+        <div class="svc-grid">
+            <div class="svc-row">
+                <div class="svc-num">01</div>
+                <div class="svc-body">
+                    <div class="svc-ttl">管理部門構築・継続顧問</div>
+                    <div class="svc-desc">月次決算の高速化・管理会計の構築・業務フロー整備・ツール選定・担当者育成まで、管理部門全体を設計して継続的にサポート。月1〜4回の定例MTGと随時相談対応。</div>
+                </div>
+                <div class="svc-meta"><strong>月次締め実績</strong>翌月末→翌月8日以内</div>
+            </div>
+            <div class="svc-row">
+                <div class="svc-num">02</div>
+                <div class="svc-body">
+                    <div class="svc-ttl">月次決算早期化プロジェクト</div>
+                    <div class="svc-desc">「翌月末が締め」を「翌月10日以内」に変える集中プロジェクト。業務プロセスの可視化・ボトルネック特定・ツール改善を3〜6ヶ月で完結。スポット契約も可。</div>
+                </div>
+                <div class="svc-meta"><strong>期間</strong>3〜6ヶ月の集中型</div>
+            </div>
+            <div class="svc-row">
+                <div class="svc-num">03</div>
+                <div class="svc-body">
+                    <div class="svc-ttl">AI・自動化設計</div>
+                    <div class="svc-desc">領収書OCR・仕訳自動化・月次レポート自動生成・支払期日アラートなど、AIを経理業務に組み込む設計。ツールを入れるだけでなく、業務フローに落とし込むところまで行う。</div>
+                </div>
+                <div class="svc-meta"><strong>効果の目安</strong>経理工数を最大60%削減</div>
+            </div>
+            <div class="svc-row">
+                <div class="svc-num">04</div>
+                <div class="svc-body">
+                    <div class="svc-ttl">クラウド会計 導入・移行・最適化</div>
+                    <div class="svc-desc">freee・MoneyForward・勘定奉行・PCA会計の導入・移行・設定最適化。「入れたけど使いこなせていない」状態を解消し、業務フローに合った使い方を設計する。</div>
+                </div>
+                <div class="svc-meta"><strong>対応ソフト</strong>MF / freee / 奉行 / PCA</div>
+            </div>
+            <div class="svc-row">
+                <div class="svc-num">05</div>
+                <div class="svc-body">
+                    <div class="svc-ttl">管理会計・経営ダッシュボード構築</div>
+                    <div class="svc-desc">事業別・商品別・部門別の粗利・固定費・キャッシュフローを可視化。「売上はわかるが利益の構造が見えない」状態を解消し、数字で経営判断できる状態をつくる。</div>
+                </div>
+                <div class="svc-meta"><strong>目標状態</strong>翌日に経営数値が手元にある</div>
+            </div>
+            <div class="svc-row">
+                <div class="svc-num">06</div>
+                <div class="svc-body">
+                    <div class="svc-ttl">助成金・補助金 活用支援</div>
+                    <div class="svc-desc">業務改善助成金・IT導入補助金・人材開発支援助成金など、管理部門整備・DX投資に使える助成金を選定・申請支援。取得後の効果測定まで伴走する。</div>
+                </div>
+                <div class="svc-meta"><strong>支援実績</strong>最大800万円取得</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CASES -->
+<section id="cases" class="sec cases-sec">
+    <div class="sec-inner">
+        <span class="sec-label">CASE STUDIES</span>
+        <h2 class="sec-title dark">支援事例</h2>
+        <div class="cases-grid">
+            <div class="case-card">
+                <div class="case-img">
+                    <img src="images/case-1.jpg" alt="管理会計構築事例">
+                </div>
+                <div class="case-body">
+                    <div class="case-cat">管理会計構築 / 月次高速化 ｜ 製造業・従業員30名</div>
+                    <div class="case-ttl">「どの製品が儲かるか」がわからなかった会社が、6ヶ月で管理会計を整備</div>
+                    <div class="case-ba">
+                        <div class="case-ba-row"><span class="lbl lbl-b">Before</span><span>月次締めは翌月末。製品別収益は不明で、社長の感覚で価格・生産量を決めていた。</span></div>
+                        <div class="case-ba-row"><span class="lbl lbl-a">After</span><span>翌月8日に月次確定。製品別粗利を毎月可視化し、不採算製品の整理で利益率が改善。</span></div>
+                    </div>
+                    <div class="case-result">年間利益 約480万円改善</div>
+                </div>
+            </div>
+            <div class="case-card">
+                <div class="case-img">
+                    <img src="images/case-2.jpg" alt="AI自動化事例">
+                </div>
+                <div class="case-body">
+                    <div class="case-cat">AI自動化設計 / バックオフィスDX ｜ 建設業・従業員20名</div>
+                    <div class="case-ttl">月80時間かけていた経理業務を、AI活用で月30時間に圧縮</div>
+                    <div class="case-ba">
+                        <div class="case-ba-row"><span class="lbl lbl-b">Before</span><span>紙の領収書・手入力仕訳・Excel請求管理。担当者が月末に大量残業していた。</span></div>
+                        <div class="case-ba-row"><span class="lbl lbl-a">After</span><span>領収書OCR・仕訳AI提案・請求書自動発行を業務フローに組み込み、工数62%削減。</span></div>
+                    </div>
+                    <div class="case-result">月50時間削減 ／ 年間約120万円の人件費相当</div>
+                </div>
+            </div>
+            <div class="case-card">
+                <div class="case-img">
+                    <img src="images/case-3.jpg" alt="管理部門構築事例">
+                </div>
+                <div class="case-body">
+                    <div class="case-cat">管理部門ゼロからの構築 / 助成金活用 ｜ 小売業・従業員15名</div>
+                    <div class="case-ttl">社長一人で経理・総務・労務を兼任していた状態から、管理部門を内製化</div>
+                    <div class="case-ba">
+                        <div class="case-ba-row"><span class="lbl lbl-b">Before</span><span>社長が経理・総務・労務を全部やっていて本業に集中できない状態だった。</span></div>
+                        <div class="case-ba-row"><span class="lbl lbl-a">After</span><span>クラウド会計移行・業務マニュアル整備・担当者の採用・育成まで伴走。助成金も活用。</span></div>
+                    </div>
+                    <div class="case-result">助成金合計800万円取得 ／ 管理部門を完全内製化</div>
                 </div>
             </div>
         </div>
-    </nav>
+    </div>
+</section>
 
-    <!-- ヒーローセクション -->
-    <section id="home" class="hero">
-        <div class="hero-background"></div>
-        <div class="container">
-            <div class="hero-wrapper">
-                <div class="hero-content">
-                    <h1 class="hero-title">管理部門を、<br>ゼロからつくる。</h1>
-                    <p class="hero-subtitle">経理・IT・AIを設計して、社長が数字で経営できる状態をつくる</p>
-
-                    <span class="hero-checklist-label">こんな状態が続いていませんか</span>
-                    <ul class="hero-checklist">
-                        <li>月次の数字が出るのが翌月末近く</li>
-                        <li>経理業務が特定の人に属人化している</li>
-                        <li>売上はわかるが、利益の構造が見えない</li>
-                        <li>会計ソフトを入れたが使いこなせていない</li>
-                        <li>社長が経理・総務・労務を全部やっている</li>
-                        <li>数字の話は税理士任せで自分では判断できない</li>
-                    </ul>
-                    <p class="hero-checklist-note">→ 1つでも当てはまるなら、管理部門の設計が必要です。</p>
-
-                    <div class="hero-buttons">
-                        <a href="#contact" class="btn btn-primary btn-large">まず無料相談を予約する</a>
-                        <a href="#what" class="btn btn-secondary">できることを見る</a>
-                    </div>
+<!-- WHY -->
+<section class="sec why-sec">
+    <div class="sec-inner">
+        <span class="sec-label" style="color:rgba(184,151,90,.8)">WHY DIFFERENT</span>
+        <h2 class="sec-title light">他の支援者と<br>何が違うか</h2>
+        <div class="why-grid">
+            <div class="why-card">
+                <div class="why-icon">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="2" y="2" width="7" height="7" stroke="currentColor" stroke-width="1.2"/><rect x="11" y="2" width="7" height="7" stroke="currentColor" stroke-width="1.2"/><rect x="2" y="11" width="7" height="7" stroke="currentColor" stroke-width="1.2"/><rect x="11" y="11" width="7" height="7" stroke="currentColor" stroke-width="1.2"/></svg>
                 </div>
+                <div class="why-ttl">上場企業の「中」を知っている</div>
+                <div class="why-desc">理想論ではなく、実際に動いていた管理体制の経験から設計する。何が機能して、何が機能しないかを実務として知っている。「あるべき姿」を中小企業の規模に翻訳して提案できる。</div>
+            </div>
+            <div class="why-card">
+                <div class="why-icon">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 10 L8 15 L17 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div class="why-ttl">ツールを入れるだけで終わらない</div>
+                <div class="why-desc">会計ソフトの設定だけでなく、業務フロー・担当者の動き方・自動化の設計まで含めて「動く状態」にする。「導入したけど使いこなせていない」を起こさない設計が得意。</div>
+            </div>
+            <div class="why-card">
+                <div class="why-icon">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.2"/><path d="M10 6v4l3 2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+                </div>
+                <div class="why-ttl">経理・IT・AIを一人で設計できる</div>
+                <div class="why-desc">経理の知識・IT設計・AI活用の3つを組み合わせられる人間は少ない。一人で担えることで、「経理担当に言ったらITがわからない」という分断が起きない設計ができる。</div>
+            </div>
+            <div class="why-card">
+                <div class="why-icon">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2 L12.5 7.5 L18 8.5 L14 12.5 L15 18 L10 15.5 L5 18 L6 12.5 L2 8.5 L7.5 7.5 Z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg>
+                </div>
+                <div class="why-ttl">外部監査役の目を持って入る</div>
+                <div class="why-desc">経営者に「都合の良いこと」だけを言う支援者にはならない。数字の歪みやリスクを正直に指摘できる立場で関わる。外部監査役としての経験が、このスタンスを支えている。</div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- 実績セクション -->
-    <section class="stats-section">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-box">
-                    <div class="stat-number-large">30+</div>
-                    <div class="stat-label-large">支援実績企業数</div>
+<!-- PROFILE -->
+<section id="profile" class="sec profile-sec">
+    <div class="sec-inner">
+        <span class="sec-label">PROFILE</span>
+        <div class="profile-grid">
+            <div class="profile-left">
+                <div class="profile-photo-wrap">
+                    <img src="images/reason-1.jpg" alt="川戸浩嗣" style="width:100%;height:100%;object-fit:cover;opacity:.9">
+                    <div class="profile-photo-placeholder" style="background:rgba(14,28,22,.3)">
+                    </div>
                 </div>
-                <div class="stat-box">
-                    <div class="stat-number-large">3日</div>
-                    <div class="stat-label-large">月次早期化の目標（翌月10日以内）</div>
+                <div class="profile-name">川戸 浩嗣</div>
+                <div class="profile-kana">Koji Kawato / Vision Assist Partner</div>
+                <div class="profile-role-box">
+                    管理部門をゼロからつくる人<br>
+                    経理・IT・AIを設計して、<br>数字で動く会社をつくる
                 </div>
-                <div class="stat-box">
-                    <div class="stat-number-large">60%</div>
-                    <div class="stat-label-large">経理工数削減の目安</div>
-                </div>
-                <div class="stat-box">
-                    <div class="stat-number-large">800万</div>
-                    <div class="stat-label-large">助成金取得実績（最大）</div>
+                <div class="profile-tags">
+                    <span class="profile-tag">上場企業経理出身</span>
+                    <span class="profile-tag">外部監査役</span>
+                    <span class="profile-tag">AI経理設計士</span>
+                    <span class="profile-tag">MF / freee / 奉行 / PCA</span>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- できること（役割4分類）-->
-    <section id="what" class="roles-section">
-        <div class="container">
-            <h2 class="section-title">4つの役割で、管理部門を設計する</h2>
-            <p class="section-subtitle">単発の課題解決ではなく、会社全体の管理部門を設計して「自社で回り続ける状態」をつくることを目的にしています。</p>
-            <div class="roles-grid">
-                <div class="role-card">
-                    <span class="role-num">01</span>
-                    <div class="role-ttl">管理部門をゼロから作る</div>
-                    <div class="role-desc">「経理担当がいない」「社長が全部やっている」状態から脱却。業務フローの設計・ツール選定・担当者の採用・育成まで一気通貫で支援。外部に頼り続けなくても自社で回る体制をつくる。</div>
-                    <div class="role-tags">
-                        <span class="role-tag">業務フロー設計</span>
-                        <span class="role-tag">ツール選定</span>
-                        <span class="role-tag">担当者育成</span>
-                        <span class="role-tag">内製化支援</span>
+            <div>
+                <div class="career-label">CAREER</div>
+                <ul class="career-list">
+                    <li class="career-item">
+                        <div class="career-year">上場企業</div>
+                        <div class="career-desc">東証上場企業の経理部門に勤務。月次・年次決算、管理会計、内部統制、開示業務を担当。上場企業水準の管理体制を内側から設計・運用してきた経験を持つ。「あるべき姿」を実務として知っている。</div>
+                    </li>
+                    <li class="career-item">
+                        <div class="career-year">外部監査役</div>
+                        <div class="career-desc">複数の中小企業で外部監査役を兼任。経営者が見落としがちな数字の歪みやガバナンスの穴を発見する目と、経営者が納得できる言葉で伝える経験を積んでいる。</div>
+                    </li>
+                    <li class="career-item">
+                        <div class="career-year">現在</div>
+                        <div class="career-desc">中小企業の管理部門構築・月次高速化・AI活用自動化を支援。MoneyForward・freee・勘定奉行・PCA会計を横断的に使いこなし、ツール選定から業務設計・自動化まで一気通貫で対応できることが強み。</div>
+                    </li>
+                </ul>
+                <div class="career-label">DIFFERENTIATORS</div>
+                <div class="diff-grid">
+                    <div class="diff-card">
+                        <h4>上場企業の実務経験</h4>
+                        <p>理論でなく、実際に動いていた管理体制を知っている。中小企業の規模に翻訳して設計できる。</p>
                     </div>
-                </div>
-                <div class="role-card">
-                    <span class="role-num">02</span>
-                    <div class="role-ttl">数字で経営判断できる状態にする</div>
-                    <div class="role-desc">売上だけでなく、事業別・商品別の粗利・固定費・キャッシュフローを可視化。「なんとなく黒字」から「どこで稼いでいるかわかる」経営に変える。月次を翌月10日以内に締めることを最初の目標にする。</div>
-                    <div class="role-tags">
-                        <span class="role-tag">管理会計</span>
-                        <span class="role-tag">月次高速化</span>
-                        <span class="role-tag">KPI設計</span>
-                        <span class="role-tag">経営ダッシュボード</span>
+                    <div class="diff-card">
+                        <h4>ツール選定から自動化まで一貫</h4>
+                        <p>MF・freee・奉行・PCAを横断的に理解。移行設計から自動化まで分断なく対応できる。</p>
                     </div>
-                </div>
-                <div class="role-card">
-                    <span class="role-num">03</span>
-                    <div class="role-ttl">経理×AIで業務を自動化する</div>
-                    <div class="role-desc">領収書のOCR・仕訳の自動提案・月次レポートの自動生成・支払期日のアラートなど、AIを使って「人がやらなくていい仕事」を設計して取り除く。ツールを入れるだけでなく、業務フローに組み込むところまでやる。</div>
-                    <div class="role-tags">
-                        <span class="role-tag">仕訳自動化</span>
-                        <span class="role-tag">OCR活用</span>
-                        <span class="role-tag">レポート自動生成</span>
-                        <span class="role-tag">AI業務設計</span>
+                    <div class="diff-card">
+                        <h4>経理×IT×AIの三刀流</h4>
+                        <p>3つの領域を一人で設計できる。「担当者をまたぐ」ことで起きる設計の分断がない。</p>
                     </div>
-                </div>
-                <div class="role-card">
-                    <span class="role-num">04</span>
-                    <div class="role-ttl">バックオフィス全体を設計する</div>
-                    <div class="role-desc">経理だけでなく、総務・労務・IT環境・社内ルールを含めた管理部門全体を俯瞰して設計する。「このツールとあのツールが連携していない」「誰が何を管理しているかわからない」状態を整理して、全体が噛み合う状態にする。</div>
-                    <div class="role-tags">
-                        <span class="role-tag">バックオフィス設計</span>
-                        <span class="role-tag">ツール連携</span>
-                        <span class="role-tag">社内ルール整備</span>
-                        <span class="role-tag">労務管理</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Before / After -->
-    <section class="ba-section">
-        <div class="container">
-            <h2 class="section-title">支援前と支援後で、何が変わるか</h2>
-            <p class="section-subtitle">管理部門が整うと、経営のリズムが変わります。</p>
-            <div class="ba-grid">
-                <div class="ba-col before-col">
-                    <div class="ba-head before-head">
-                        <span class="ba-badge b">BEFORE</span>支援前の状態
-                    </div>
-                    <ul class="ba-items">
-                        <li>月次の締めが翌月20〜末日で、常に1ヶ月前の数字で動いている</li>
-                        <li>売上は把握しているが、利益の構造・原価・固定費の内訳が見えていない</li>
-                        <li>経理業務が特定の人に集中していて、その人が休めない</li>
-                        <li>会計ソフトはあるが手入力が多く、月末に仕訳をまとめて入力している</li>
-                        <li>資金繰りの先が読めず、銀行残高を見て判断している</li>
-                        <li>税理士には申告をお願いしているが、経営の相談はできていない</li>
-                    </ul>
-                </div>
-                <div class="ba-col after-col">
-                    <div class="ba-head after-head">
-                        <span class="ba-badge a">AFTER</span>設計後の状態
-                    </div>
-                    <ul class="ba-items">
-                        <li>翌月8〜10日に月次が確定し、当月の経営判断に使える数字が手元にある</li>
-                        <li>事業別・商品別の粗利が見えて、どこで稼いでいるかを数字で説明できる</li>
-                        <li>業務フローが整備されて、担当者が変わっても回る仕組みになっている</li>
-                        <li>領収書・請求書の処理が自動化されて、経理の手作業が大幅に減っている</li>
-                        <li>3ヶ月先までのキャッシュフロー予測が常に更新されて、先手で動ける</li>
-                        <li>月次レポートをもとに、具体的な経営判断の議論ができるようになっている</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- サービスセクション -->
-    <section id="services" class="services">
-        <div class="container">
-            <h2 class="section-title">サービスメニュー</h2>
-            <p class="section-subtitle">単発の課題解決ではなく、管理部門の「体制」をつくることを目的にしています。</p>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-card-header">
-                        <span class="service-number">01</span>
-                        <h3>管理部門構築・継続顧問</h3>
-                    </div>
-                    <p>月次決算の高速化・管理会計の構築・業務フロー整備・ツール選定・担当者育成まで、管理部門全体を設計して継続的にサポート。月1〜4回の定例MTGと随時相談対応。上場企業経理出身の視点で、経営判断に使える数字を整える。</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-card-header">
-                        <span class="service-number">02</span>
-                        <h3>月次決算早期化プロジェクト</h3>
-                    </div>
-                    <p>「翌月末が締め」を「翌月10日以内」に変える集中プロジェクト。業務プロセスの可視化・ボトルネック特定・ツール改善を3〜6ヶ月で完結。スポット契約も可。</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-card-header">
-                        <span class="service-number">03</span>
-                        <h3>AI・自動化設計</h3>
-                    </div>
-                    <p>領収書OCR・仕訳自動化・月次レポート自動生成・支払期日アラートなど、AIを経理業務に組み込む設計。ツールを入れるだけでなく、業務フローに落とし込むところまで行う。</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-card-header">
-                        <span class="service-number">04</span>
-                        <h3>クラウド会計 導入・移行・最適化</h3>
-                    </div>
-                    <p>freee・MoneyForward・勘定奉行・PCA会計の導入・移行・設定最適化。「入れたけど使いこなせていない」状態を解消し、業務フローに合った使い方を設計する。</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-card-header">
-                        <span class="service-number">05</span>
-                        <h3>管理会計・経営ダッシュボード構築</h3>
-                    </div>
-                    <p>事業別・商品別・部門別の粗利・固定費・キャッシュフローを可視化。「売上はわかるが利益の構造が見えない」状態を解消し、数字で経営判断できる状態をつくる。</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-card-header">
-                        <span class="service-number">06</span>
-                        <h3>助成金・補助金 活用支援</h3>
-                    </div>
-                    <p>業務改善助成金・IT導入補助金・人材開発支援助成金など、管理部門整備・DX投資に使える助成金を選定・申請支援。申請だけでなく、取得後の効果測定まで伴走する。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 選ばれる理由（既存クラス＋画像を活かして中身だけ入れ替え） -->
-    <section class="reasons-section">
-        <div class="container">
-            <h2 class="section-title">他の支援者と何が違うか</h2>
-            <p class="section-subtitle">経理・IT・AI、そして上場企業経理と外部監査役の経験。この組み合わせが差別化の源泉です。</p>
-            <div class="reasons-grid">
-                <div class="reason-card">
-                    <div class="reason-photo reason-photo-1">
-                        <div class="photo-placeholder-small"><span>写真</span></div>
-                    </div>
-                    <h3>上場企業の「中」を知っている</h3>
-                    <p>理想論ではなく、実際に動いていた管理体制の経験から設計する。何が機能して、何が機能しないかを実務として知っている。「あるべき姿」を中小企業の規模に翻訳して提案できる。</p>
-                </div>
-                <div class="reason-card">
-                    <div class="reason-photo reason-photo-2">
-                        <div class="photo-placeholder-small"><span>写真</span></div>
-                    </div>
-                    <h3>ツールを入れるだけで終わらない</h3>
-                    <p>会計ソフトの設定だけでなく、業務フロー・担当者の動き方・自動化の設計まで含めて「動く状態」にする。「導入したけど使いこなせていない」を起こさない設計が得意。</p>
-                </div>
-                <div class="reason-card">
-                    <div class="reason-photo reason-photo-3">
-                        <div class="photo-placeholder-small"><span>写真</span></div>
-                    </div>
-                    <h3>経理・IT・AIを一人で設計できる</h3>
-                    <p>経理の知識・IT設計・AI活用の3つを組み合わせられる人間は少ない。一人で担えることで、「経理担当に言ったらITがわからない」という分断が起きない設計ができる。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 導入事例セクション（既存クラス＋画像を活かして中身だけ入れ替え） -->
-    <section id="cases" class="cases-section">
-        <div class="container">
-            <h2 class="section-title">支援事例</h2>
-            <p class="section-subtitle">Before / Afterで、何がどう変わったかをお伝えします。</p>
-            <div class="cases-grid">
-                <div class="case-card">
-                    <div class="case-photo case-photo-1">
-                        <div class="photo-placeholder-case"><span>事例写真</span></div>
-                    </div>
-                    <div class="case-content">
-                        <div class="case-category">管理会計構築 / 月次高速化 ｜ 製造業・従業員30名</div>
-                        <h3>「どの製品が儲かるか」がわからなかった会社が、6ヶ月で管理会計を整備</h3>
-                        <p>月次締めは翌月末で、製品別収益は不明。社長の感覚で価格・生産量を決めていた状態から、翌月8日に月次確定、製品別粗利を毎月可視化できる体制に。不採算製品の整理と価格見直しで利益率が改善。</p>
-                        <p><strong>成果：年間利益 約480万円改善</strong></p>
-                    </div>
-                </div>
-                <div class="case-card">
-                    <div class="case-photo case-photo-2">
-                        <div class="photo-placeholder-case"><span>事例写真</span></div>
-                    </div>
-                    <div class="case-content">
-                        <div class="case-category">AI自動化設計 / バックオフィスDX ｜ 建設業・従業員20名</div>
-                        <h3>月80時間かけていた経理業務を、AI活用で月30時間に圧縮</h3>
-                        <p>紙の領収書・手入力仕訳・Excel請求管理で担当者が月末に大量残業していた状態から、領収書OCR・仕訳AI提案・請求書自動発行を業務フローに組み込み、工数を62%削減。</p>
-                        <p><strong>成果：月50時間削減 / 人件費換算 年間約120万円</strong></p>
-                    </div>
-                </div>
-                <div class="case-card">
-                    <div class="case-photo case-photo-3">
-                        <div class="photo-placeholder-case"><span>事例写真</span></div>
-                    </div>
-                    <div class="case-content">
-                        <div class="case-category">管理部門ゼロからの構築 / 助成金活用 ｜ 小売業・従業員15名</div>
-                        <h3>社長一人で経理・総務・労務を兼任していた状態から、管理部門を内製化</h3>
-                        <p>社長が経理・総務・労務を全部やっていて本業に集中できない状態から、クラウド会計移行・業務マニュアル整備・経理担当の採用・育成まで伴走。IT導入補助金・業務改善助成金も活用。</p>
-                        <p><strong>成果：助成金合計800万円取得 / 社長が本業に集中できる状態に</strong></p>
+                    <div class="diff-card">
+                        <h4>監査役目線で正直に伝える</h4>
+                        <p>都合の良いことだけ言わない。数字のリスクや問題を正直に指摘できる立場で入る。</p>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- お客様の声（既存クラス＋画像を活かして中身だけ入れ替え） -->
-    <section class="testimonials-section">
-        <div class="container">
-            <h2 class="section-title">お客様の声</h2>
-            <p class="section-subtitle">実際に管理部門の設計支援を受けた経営者・担当者の声です。</p>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-photo testimonial-photo-1">
-                        <div class="photo-placeholder-medium"><span>企業ロゴ<br>または写真</span></div>
-                    </div>
-                    <div class="testimonial-header">
-                        <div class="testimonial-company">製造業 A社 代表取締役</div>
-                        <div class="testimonial-service">管理会計構築 / 月次高速化</div>
-                    </div>
-                    <p class="testimonial-text">「月次が翌月末まで終わらないのが当たり前だと思っていました。設計してもらってから翌月8日には数字が出るようになり、経営会議の中身が完全に変わりました。どの製品を伸ばすか、どこを削るか、数字をもとに話せるようになったのが一番の変化です。」</p>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-photo testimonial-photo-2">
-                        <div class="photo-placeholder-medium"><span>企業ロゴ<br>または写真</span></div>
-                    </div>
-                    <div class="testimonial-header">
-                        <div class="testimonial-company">建設業 B社 代表取締役</div>
-                        <div class="testimonial-service">AI自動化設計 / バックオフィスDX</div>
-                    </div>
-                    <p class="testimonial-text">「経理担当が毎月末に残業続きで、このままでは辞めてしまうと思っていました。AIと業務フローの設計を同時にやってもらって、月の工数が半分以下になりました。ツールを入れるだけでなく、使い方まで設計してもらえたのが決定的に違いました。」</p>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-photo testimonial-photo-3">
-                        <div class="photo-placeholder-medium"><span>企業ロゴ<br>または写真</span></div>
-                    </div>
-                    <div class="testimonial-header">
-                        <div class="testimonial-company">小売業 C社 代表取締役</div>
-                        <div class="testimonial-service">管理部門ゼロからの構築</div>
-                    </div>
-                    <p class="testimonial-text">「創業から自分で経理を全部やっていて、それが当たり前だと思っていました。管理部門をゼロから設計してもらい、担当者を採用・育成するところまで伴走してもらえたことで、初めて本業だけに集中できる時間ができました。助成金の提案もあり、費用以上の価値がありました。」</p>
-                </div>
+<!-- PRICING -->
+<section class="sec pricing-sec">
+    <div class="sec-inner">
+        <span class="sec-label">PRICING</span>
+        <h2 class="sec-title dark">料金の目安</h2>
+        <div class="pricing-grid">
+            <div class="price-card">
+                <span class="price-badge">SPOT / PROJECT TYPE</span>
+                <div class="price-ttl">単発・集中支援</div>
+                <div class="price-num">応相談<span>（内容・期間による）</span></div>
+                <p class="price-note">月次早期化・ツール移行・AI自動化設計など、課題を絞った集中支援。3〜6ヶ月で完結。</p>
+                <ul class="price-list">
+                    <li>現状診断・課題整理</li>
+                    <li>設計・実装支援</li>
+                    <li>担当者への引き継ぎ</li>
+                    <li>完了後フォローアップ</li>
+                </ul>
+            </div>
+            <div class="price-card featured">
+                <span class="price-badge">RETAINER TYPE — RECOMMENDED</span>
+                <div class="price-ttl">管理部門 継続設計支援</div>
+                <div class="price-num">月30〜50万円<span>（税別）</span></div>
+                <p class="price-note">管理部門全体を継続的に設計・改善。月1〜4回の定例MTG＋随時Slack相談対応。</p>
+                <ul class="price-list">
+                    <li>月次決算の設計・高速化支援</li>
+                    <li>管理会計・経営ダッシュボード構築</li>
+                    <li>AI自動化・ツール最適化</li>
+                    <li>随時相談対応（Slack）</li>
+                    <li>助成金活用の提案・申請支援</li>
+                </ul>
             </div>
         </div>
-    </section>
+        <p style="margin-top:20px;font-size:13px;color:var(--stone)">まずは無料相談で現状をお聞かせください。貴社の状況に合わせた費用感をご提示します。</p>
+    </div>
+</section>
 
-    <!-- 料金セクション -->
-    <section class="pricing-section">
-        <div class="container">
-            <h2 class="section-title">料金の目安</h2>
-            <p class="section-subtitle">まずは無料相談で現状をお聞かせください。貴社の状況に合わせた支援内容と費用感をご提示します。</p>
-            <div class="pricing-grid">
-                <div class="price-card">
-                    <span class="price-badge">スポット / プロジェクト型</span>
-                    <div class="price-ttl">単発・集中支援</div>
-                    <div class="price-range">応相談<span>（内容・期間による）</span></div>
-                    <p class="price-note">月次早期化・ツール移行・AI自動化設計など、課題を絞った集中支援。3〜6ヶ月で完結。</p>
-                    <ul class="price-includes">
-                        <li>現状診断・課題整理</li>
-                        <li>設計・実装支援</li>
-                        <li>担当者への引き継ぎ</li>
-                        <li>完了後フォローアップ</li>
-                    </ul>
-                </div>
-                <div class="price-card featured">
-                    <span class="price-badge">継続顧問型（推奨）</span>
-                    <div class="price-ttl">管理部門 継続設計支援</div>
-                    <div class="price-range">月30〜50万円<span>（税別）</span></div>
-                    <p class="price-note">管理部門全体を継続的に設計・改善。月1〜4回の定例MTG＋随時Slack相談対応。</p>
-                    <ul class="price-includes">
-                        <li>月次決算の設計・高速化支援</li>
-                        <li>管理会計・経営ダッシュボード構築</li>
-                        <li>AI自動化・ツール最適化</li>
-                        <li>随時相談対応（Slack）</li>
-                        <li>助成金活用の提案・申請支援</li>
-                    </ul>
-                </div>
+<!-- PROCESS -->
+<section class="sec process-sec">
+    <div class="sec-inner">
+        <span class="sec-label">HOW IT WORKS</span>
+        <h2 class="sec-title dark">支援の流れ</h2>
+        <div class="process-grid">
+            <div class="process-step">
+                <div class="step-n">01</div>
+                <div class="step-ttl">無料相談（30分）</div>
+                <div class="step-desc">現状の経理体制・管理部門・困っていることをヒアリング。課題の整理と優先順位を一緒に確認します。費用・契約の強制は一切ありません。</div>
+                <span class="step-badge">Zoom / 対面</span>
+            </div>
+            <div class="process-step">
+                <div class="step-n">02</div>
+                <div class="step-ttl">現状診断・提案</div>
+                <div class="step-desc">ヒアリングをもとに、課題・優先順位・支援内容・費用感を提案書にまとめてご提示。押しつけではなく、選択肢を一緒に検討します。</div>
+                <span class="step-badge">1週間以内</span>
+            </div>
+            <div class="process-step">
+                <div class="step-n">03</div>
+                <div class="step-ttl">契約・キックオフ</div>
+                <div class="step-desc">ご納得いただけたら契約。初月から業務に入ります。まず3ヶ月を目処に優先課題に集中し、目に見える成果を出すことを重視します。</div>
+                <span class="step-badge">最短2週間で開始</span>
+            </div>
+            <div class="process-step">
+                <div class="step-n">04</div>
+                <div class="step-ttl">継続的な伴走</div>
+                <div class="step-desc">月1〜4回の定例MTGと随時Slackでの相談対応。「数字で動く会社」になるまで伴走します。体制が整ったら支援頻度を落とすことも可能です。</div>
+                <span class="step-badge">長期パートナーとして</span>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- 会社概要（プロフィール） -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">プロフィール</h2>
-            <p class="section-subtitle">Vision Assist Partner / 川戸浩嗣</p>
-            <div class="about-content">
-                <div class="company-info">
-                    <div class="info-row">
-                        <div class="info-label">氏名</div>
-                        <div class="info-value">川戸浩嗣（Koji Kawato）</div>
-                    </div>
-                    <div class="info-row">
-                        <div class="info-label">屋号</div>
-                        <div class="info-value">Vision Assist Partner</div>
-                    </div>
-                    <div class="info-row">
-                        <div class="info-label">設立</div>
-                        <div class="info-value">2022年10月</div>
-                    </div>
-                    <div class="info-row">
-                        <div class="info-label">所在地</div>
-                        <div class="info-value">〒545-0021　大阪府大阪市阿倍野区阪南町</div>
-                    </div>
-                    <div class="info-row">
-                        <div class="info-label">専門領域</div>
-                        <div class="info-value">管理部門構築・月次決算高速化・管理会計・AI経理自動化・クラウド会計移行・助成金活用</div>
-                    </div>
-                    <div class="info-row">
-                        <div class="info-label">対応ソフト</div>
-                        <div class="info-value">MoneyForward / freee / 勘定奉行 / PCA会計</div>
-                    </div>
-                    <div class="info-row">
-                        <div class="info-label">兼任</div>
-                        <div class="info-value">複数社の外部監査役</div>
-                    </div>
-                </div>
-                <div class="about-message">
-                    <h3>なぜこの仕事をしているか</h3>
-                    <p>東証上場企業の経理部門で、月次・年次決算・管理会計・内部統制・開示業務を担当してきました。上場企業には「当たり前」として機能している管理体制が、中小企業にはほとんど存在しないことに気づいたのが、この仕事を始めたきっかけです。</p>
-                    <p>「社長が数字を把握できていない」「経理が属人化していて誰も休めない」「会計ソフトを入れたが手入力が減らない」——これらは能力の問題ではなく、設計の問題です。経理・IT・AIを組み合わせて管理部門を設計し直せば、中小企業でも数字で動く経営ができる。それを証明することが、自分の仕事だと考えています。</p>
-                    <p>外部監査役としての経験から、経営者に「都合の良いこと」だけを言う支援者にはなりません。数字が示す現実を正直に伝え、一緒に次の手を考える関係を大切にしています。</p>
-                </div>
+<!-- FAQ -->
+<section id="faq" class="sec faq-sec">
+    <div class="sec-inner">
+        <span class="sec-label">FAQ</span>
+        <h2 class="sec-title dark">よくある質問</h2>
+        <div class="faq-wrap">
+            <div class="faq-item">
+                <div class="faq-q">どんな会社が対象ですか？</div>
+                <div class="faq-a">主に従業員5〜100名、年商1億〜20億円規模の中小企業を中心に支援しています。「これから管理体制を作りたい」創業期から、「今の体制では限界を感じている」成長期の企業まで幅広く対応可能です。まずは現状をお聞かせください。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">すでに税理士がいます。何が変わりますか？</div>
+                <div class="faq-a">税理士は税務申告のプロであり、管理会計の構築・月次高速化・AI自動化・業務フロー設計は業務範囲外であることがほとんどです。既存の税理士を置き換えるのではなく、「税理士が扱わない経営管理領域」を担います。既存の税理士との連携体制も設計できます。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">どのくらいで効果が出ますか？</div>
+                <div class="faq-a">月次決算の早期化は、着手から3ヶ月以内に改善が見えるケースがほとんどです。管理会計の構築・AI自動化は6ヶ月を目処に形になります。3ヶ月・6ヶ月の目標を最初に明確にして進めます。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">社内に経理担当がいなくても大丈夫ですか？</div>
+                <div class="faq-a">むしろそういう状態の会社への支援が最も多いです。「社長が経理も全部やっている」状態から、担当者の採用・育成・業務フロー整備まで一緒に設計します。ゼロからの構築が得意です。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">リモートのみですか？</div>
+                <div class="faq-a">基本はZoomでのリモート対応ですが、関西・関東エリアは対面での訪問も対応可能です。初回や重要な局面は対面で、日常の相談はSlack・Zoomという組み合わせが多いです。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">最低契約期間はありますか？</div>
+                <div class="faq-a">継続顧問の場合、最低3ヶ月からお願いしています。その後は1ヶ月前の申告で解約可能です。「体制が整ったので支援頻度を落としたい」というご要望にも柔軟に対応します。</div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- FAQセクション -->
-    <section id="faq" class="faq-section">
-        <div class="container">
-            <h2 class="section-title">よくある質問</h2>
-            <p class="section-subtitle">お気軽にお問い合わせください。</p>
-            <div class="faq-list">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>どんな会社が対象ですか？</h3>
-                        <span class="faq-toggle">+</span>
+<!-- CTA -->
+<section id="contact" class="cta-sec">
+    <div class="sec-inner">
+        <div class="cta-grid">
+            <div class="cta-left">
+                <span class="sec-label" style="color:rgba(184,151,90,.7)">FREE CONSULTATION</span>
+                <h2 class="cta-ttl">まず話すだけでいい。<br><em>30分の無料相談</em>で、<br>現状を整理しましょう。</h2>
+                <p class="cta-sub">費用・契約の強制は一切ありません。<br>「うちで相談していいのか？」と迷っている方こそ、お気軽にどうぞ。</p>
+                <ul class="cta-points">
+                    <li>現状の課題を一緒に整理します</li>
+                    <li>費用・期間の目安をお伝えします</li>
+                    <li>合わなければ、それで終わりで構いません</li>
+                    <li>通常2営業日以内に返信します</li>
+                </ul>
+            </div>
+            <div class="cta-form-box">
+                <div class="cta-form-ttl">無料相談を予約する</div>
+                <div class="cta-form-sub">通常2営業日以内にご連絡します</div>
+                <form id="contactForm">
+                    <div class="form-grp"><label>お名前 *</label><input type="text" name="name" placeholder="山田 太郎" required></div>
+                    <div class="form-grp"><label>会社名</label><input type="text" name="company" placeholder="株式会社〇〇"></div>
+                    <div class="form-grp"><label>メールアドレス *</label><input type="email" name="email" placeholder="your@email.com" required></div>
+                    <div class="form-grp">
+                        <label>今一番困っていること</label>
+                        <select name="service">
+                            <option value="">選択してください</option>
+                            <option value="zero">管理部門をゼロから作りたい</option>
+                            <option value="speed">月次決算を早くしたい</option>
+                            <option value="visible">利益の構造を数字で把握したい</option>
+                            <option value="auto">経理業務を自動化・効率化したい</option>
+                            <option value="tool">会計ソフトを使いこなせていない</option>
+                            <option value="subsidy">助成金・補助金を活用したい</option>
+                            <option value="other">その他・まだわからない</option>
+                        </select>
                     </div>
-                    <div class="faq-answer">
-                        <p>主に従業員5〜100名、年商1億〜20億円規模の中小企業を中心に支援しています。「これから管理体制を作りたい」創業期から、「今の体制では限界を感じている」成長期の企業まで幅広く対応可能です。業種は製造業・建設業・小売業・サービス業など様々です。まずは現状をお聞かせください。</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>すでに税理士がいます。何が変わりますか？</h3>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>税理士は税務申告のプロであり、管理会計の構築・月次高速化・AI自動化・業務フロー設計は業務範囲外であることがほとんどです。既存の税理士を置き換えるのではなく、「税理士が扱わない経営管理領域」を担います。既存の税理士との連携体制も設計できます。</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>どのくらいで効果が出ますか？</h3>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>月次決算の早期化は、着手から3ヶ月以内に改善が見えるケースがほとんどです。管理会計の構築・AI自動化は6ヶ月を目処に形になります。「何年かかるかわからない」ではなく、3ヶ月・6ヶ月の目標を最初に明確にして進めます。</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>社内に経理担当がいなくても大丈夫ですか？</h3>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>むしろそういう状態の会社への支援が最も多いです。「社長が経理も全部やっている」状態から、担当者の採用・育成・業務フロー整備まで一緒に設計します。ゼロからの構築が得意です。</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>リモートのみですか？</h3>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>基本はZoomでのリモート対応ですが、関西・関東エリアは対面での訪問も対応可能です。初回や重要な局面は対面で、日常の相談はSlack・Zoomという組み合わせが多いです。</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>最低契約期間はありますか？</h3>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>継続顧問の場合、最低3ヶ月からお願いしています。その後は1ヶ月前の申告で解約可能です。「体制が整ったので支援頻度を落としたい」というご要望にも柔軟に対応します。</p>
-                    </div>
-                </div>
+                    <div class="form-grp"><label>現状や気になっていること（任意）</label><textarea name="message" rows="3" placeholder="例：月次が翌月末まで終わらない / 社長が経理を全部やっていて限界…"></textarea></div>
+                    <button type="submit" class="form-submit">無料相談を申し込む →</button>
+                </form>
+                <div class="form-privacy"><a href="privacy.html">プライバシーポリシー</a>および<a href="terms.html">利用規約</a>に同意のうえ送信してください</div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- お問い合わせセクション -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">無料相談を予約する</h2>
-            <p class="section-subtitle">まず話すだけでいい。30分の無料相談で、現状を整理しましょう。費用・契約の強制は一切ありません。</p>
-            <form class="contact-form" id="contactForm">
-                <div class="form-group">
-                    <label for="name">お名前 <span class="required">*</span></label>
-                    <input type="text" id="name" name="name" required placeholder="山田 太郎">
-                </div>
-                <div class="form-group">
-                    <label for="company">会社名</label>
-                    <input type="text" id="company" name="company" placeholder="株式会社〇〇">
-                </div>
-                <div class="form-group">
-                    <label for="email">メールアドレス <span class="required">*</span></label>
-                    <input type="email" id="email" name="email" required placeholder="your@email.com">
-                </div>
-                <div class="form-group">
-                    <label for="service">今一番困っていること</label>
-                    <select id="service" name="service">
-                        <option value="">選択してください</option>
-                        <option value="zero">管理部門をゼロから作りたい</option>
-                        <option value="speed">月次決算を早くしたい</option>
-                        <option value="visible">利益の構造を数字で把握したい</option>
-                        <option value="auto">経理業務を自動化・効率化したい</option>
-                        <option value="tool">会計ソフトを使いこなせていない</option>
-                        <option value="subsidy">助成金・補助金を活用したい</option>
-                        <option value="other">その他・まだわからない</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="message">現状や気になっていること（任意）</label>
-                    <textarea id="message" name="message" rows="4" placeholder="例：月次が翌月末まで終わらない / 社長が経理を全部やっていて限界 / 会計ソフトを入れたが手入力が減らない…"></textarea>
-                </div>
-                <div class="form-group checkbox-group">
-                    <label>
-                        <input type="checkbox" name="privacy" required>
-                        <span><a href="privacy.html" target="_blank">プライバシーポリシー</a>および<a href="terms.html" target="_blank">利用規約</a>に同意します <span class="required">*</span></span>
-                    </label>
-                </div>
-                <button type="submit" class="btn btn-primary btn-large">無料相談を申し込む</button>
-            </form>
+<!-- FOOTER -->
+<footer>
+    <div class="footer-inner">
+        <div>
+            <div class="footer-brand-name">管理部門をつくる人<br>川戸浩嗣 / Vision Assist Partner</div>
+            <div class="footer-brand-desc">経理・IT・AIを設計して、社長が数字で経営できる状態をつくる。上場企業経理出身・外部監査役。</div>
         </div>
-    </section>
-
-    <!-- フッター -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>管理部門をつくる人<br>川戸浩嗣 / Vision Assist Partner</h3>
-                    <p>経理・IT・AIを設計して、社長が数字で経営できる状態をつくる。上場企業経理出身・外部監査役。</p>
-                </div>
-                <div class="footer-section">
-                    <h4>メニュー</h4>
-                    <ul>
-                        <li><a href="#what">できること</a></li>
-                        <li><a href="#services">サービス</a></li>
-                        <li><a href="#cases">事例</a></li>
-                        <li><a href="#about">プロフィール</a></li>
-                        <li><a href="#contact">無料相談</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>連絡先</h4>
-                    <p>〒545-0021<br>大阪府大阪市阿倍野区阪南町<br>Email: <a href="mailto:info@k-state.jp">info@k-state.jp</a></p>
-                </div>
-                <div class="footer-section">
-                    <h4>法的表記</h4>
-                    <ul>
-                        <li><a href="legal.html">特定商取引法に基づく表記</a></li>
-                        <li><a href="privacy.html">プライバシーポリシー</a></li>
-                        <li><a href="terms.html">利用規約</a></li>
-                    </ul>
-                </div>
+        <div class="footer-links">
+            <div class="footer-col">
+                <h4>MENU</h4>
+                <ul>
+                    <li><a href="#what">できること</a></li>
+                    <li><a href="#services">サービス</a></li>
+                    <li><a href="#cases">事例</a></li>
+                    <li><a href="#profile">プロフィール</a></li>
+                    <li><a href="#contact">無料相談</a></li>
+                </ul>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 川戸浩嗣 / Vision Assist Partner. All rights reserved.</p>
+            <div class="footer-col">
+                <h4>LEGAL</h4>
+                <ul>
+                    <li><a href="legal.html">特定商取引法</a></li>
+                    <li><a href="privacy.html">プライバシーポリシー</a></li>
+                    <li><a href="terms.html">利用規約</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>CONTACT</h4>
+                <ul>
+                    <li><a href="mailto:info@k-state.jp">info@k-state.jp</a></li>
+                    <li><a href="#contact">無料相談フォーム</a></li>
+                </ul>
             </div>
         </div>
-    </footer>
+    </div>
+    <div class="footer-copy">© 2024 川戸浩嗣 / Vision Assist Partner. All rights reserved.</div>
+</footer>
 
-    <script src="script.js"></script>
-    <script>
-    // フォーム送信
-    document.getElementById("contactForm").addEventListener("submit", async function(e) {
-        e.preventDefault();
-        const btn = this.querySelector("button[type=submit]");
-        btn.textContent = "送信中...";
-        btn.disabled = true;
-        const data = new FormData(this);
-        try {
-            await fetch("https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec", {
-                method: "POST", body: data, mode: "no-cors"
-            });
-            btn.textContent = "✓ 送信完了！2営業日以内にご連絡します";
-            btn.style.opacity = "0.7";
-        } catch {
-            btn.textContent = "送信失敗。info@k-state.jpへご連絡ください";
-            btn.disabled = false;
-        }
+<script>
+// Nav scroll
+const nav = document.getElementById("mainNav");
+window.addEventListener("scroll", () => {
+    nav.classList.toggle("scrolled", window.scrollY > 20);
+});
+// Hamburger
+const hb = document.getElementById("hamburger");
+hb.addEventListener("click", () => {
+    document.body.classList.toggle("nav-menu-open");
+});
+// FAQ
+document.querySelectorAll(".faq-q").forEach(q => {
+    q.addEventListener("click", () => {
+        const item = q.parentElement;
+        const isOpen = item.classList.contains("open");
+        document.querySelectorAll(".faq-item").forEach(i => i.classList.remove("open"));
+        if (!isOpen) item.classList.add("open");
     });
-    </script>
+});
+// Active nav highlight
+const sections = document.querySelectorAll("section[id], .stats-bar");
+const navLinks = document.querySelectorAll(".nav-links a");
+window.addEventListener("scroll", () => {
+    let cur = "";
+    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 80) cur = s.getAttribute("id"); });
+    navLinks.forEach(a => { a.style.color = a.getAttribute("href") === "#" + cur ? "var(--ink)" : ""; });
+});
+// Form
+document.getElementById("contactForm").addEventListener("submit", async function(e) {
+    e.preventDefault();
+    const btn = this.querySelector(".form-submit");
+    btn.textContent = "送信中..."; btn.disabled = true;
+    try {
+        await fetch("https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec", {
+            method: "POST", body: new FormData(this), mode: "no-cors"
+        });
+        btn.textContent = "✓ 送信完了！2営業日以内にご連絡します";
+        btn.style.background = "#2d6b4a";
+    } catch {
+        btn.textContent = "送信失敗。info@k-state.jpへご連絡ください";
+        btn.disabled = false;
+    }
+});
+</script>
 </body>
 </html>
