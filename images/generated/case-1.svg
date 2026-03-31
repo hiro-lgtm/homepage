@@ -1,0 +1,26 @@
+<svg viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="300" fill="#eeeae0"/>
+  <!-- Background subtle grid -->
+  <line x1="0" y1="50" x2="600" y2="50" stroke="#e0dcd4" stroke-width="1"/>
+  <line x1="0" y1="100" x2="600" y2="100" stroke="#e0dcd4" stroke-width="1"/>
+  <line x1="0" y1="150" x2="600" y2="150" stroke="#e0dcd4" stroke-width="1"/>
+  <line x1="0" y1="200" x2="600" y2="200" stroke="#e0dcd4" stroke-width="1"/>
+  <line x1="0" y1="250" x2="600" y2="250" stroke="#e0dcd4" stroke-width="1"/>
+  <!-- Before bars (gray) -->
+  <rect x="60" y="180" width="50" height="80" fill="#d8d4c8"/>
+  <rect x="130" y="160" width="50" height="100" fill="#d8d4c8"/>
+  <rect x="200" y="190" width="50" height="70" fill="#d8d4c8"/>
+  <!-- After bars (gold) -->
+  <rect x="300" y="100" width="50" height="160" fill="#b8973a" opacity="0.7"/>
+  <rect x="370" y="80" width="50" height="180" fill="#b8973a" opacity="0.85"/>
+  <rect x="440" y="60" width="50" height="200" fill="#b8973a"/>
+  <!-- Divider -->
+  <line x1="280" y1="40" x2="280" y2="260" stroke="#c8c4b8" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <!-- Labels -->
+  <text x="155" y="35" font-family="sans-serif" font-size="10" fill="#8a8880" text-anchor="middle" letter-spacing="2">BEFORE</text>
+  <text x="415" y="35" font-family="sans-serif" font-size="10" fill="#b8973a" text-anchor="middle" letter-spacing="2">AFTER</text>
+  <!-- Axis -->
+  <line x1="40" y1="260" x2="520" y2="260" stroke="#c8c4b8" stroke-width="1.5"/>
+  <!-- Gold bottom accent -->
+  <rect x="0" y="292" width="600" height="8" fill="#b8973a"/>
+</svg>

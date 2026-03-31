@@ -1,0 +1,53 @@
+<svg viewBox="0 0 600 360" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="360" fill="#1a1a18"/>
+  <!-- Flow nodes -->
+  <!-- Node 1 -->
+  <rect x="40" y="140" width="100" height="56" rx="2" fill="#2a2a28" stroke="#3d3d38" stroke-width="1"/>
+  <text x="90" y="164" font-family="sans-serif" font-size="10" fill="#8a8880" text-anchor="middle" letter-spacing="1">RECEIPT</text>
+  <text x="90" y="181" font-family="sans-serif" font-size="10" fill="#8a8880" text-anchor="middle" letter-spacing="1">INPUT</text>
+  <!-- Arrow -->
+  <line x1="140" y1="168" x2="176" y2="168" stroke="#3d3d38" stroke-width="1.5"/>
+  <polygon points="176,163 186,168 176,173" fill="#3d3d38"/>
+  <!-- Node 2 - highlighted -->
+  <rect x="186" y="130" width="100" height="76" rx="2" fill="#2a2a28" stroke="#b8973a" stroke-width="1.5"/>
+  <text x="236" y="158" font-family="sans-serif" font-size="10" fill="#b8973a" text-anchor="middle" letter-spacing="1">OCR</text>
+  <text x="236" y="175" font-family="sans-serif" font-size="10" fill="#8a8880" text-anchor="middle" letter-spacing="1">AUTO</text>
+  <text x="236" y="192" font-family="sans-serif" font-size="10" fill="#8a8880" text-anchor="middle" letter-spacing="1">SCAN</text>
+  <!-- Arrow -->
+  <line x1="286" y1="168" x2="322" y2="168" stroke="#b8973a" stroke-width="1.5" opacity="0.6"/>
+  <polygon points="322,163 332,168 322,173" fill="#b8973a" opacity="0.6"/>
+  <!-- Node 3 - highlighted -->
+  <rect x="332" y="130" width="100" height="76" rx="2" fill="#2a2a28" stroke="#b8973a" stroke-width="1.5"/>
+  <text x="382" y="158" font-family="sans-serif" font-size="10" fill="#b8973a" text-anchor="middle" letter-spacing="1">AI</text>
+  <text x="382" y="175" font-family="sans-serif" font-size="10" fill="#8a8880" text-anchor="middle" letter-spacing="1">JOURNAL</text>
+  <text x="382" y="192" font-family="sans-serif" font-size="10" fill="#8a8880" text-anchor="middle" letter-spacing="1">ENTRY</text>
+  <!-- Arrow -->
+  <line x1="432" y1="168" x2="468" y2="168" stroke="#3d3d38" stroke-width="1.5"/>
+  <polygon points="468,163 478,168 468,173" fill="#3d3d38"/>
+  <!-- Node 4 -->
+  <rect x="478" y="140" width="82" height="56" rx="2" fill="#2a2a28" stroke="#3d3d38" stroke-width="1"/>
+  <text x="519" y="164" font-family="sans-serif" font-size="10" fill="#8a8880" text-anchor="middle" letter-spacing="1">REPORT</text>
+  <text x="519" y="181" font-family="sans-serif" font-size="10" fill="#8a8880" text-anchor="middle" letter-spacing="1">AUTO</text>
+  <!-- Decorative circuits top -->
+  <line x1="100" y1="30" x2="100" y2="80" stroke="#2a2a28" stroke-width="1"/>
+  <line x1="100" y1="80" x2="200" y2="80" stroke="#2a2a28" stroke-width="1"/>
+  <circle cx="100" cy="30" r="3" fill="#3d3d38"/>
+  <circle cx="200" cy="80" r="3" fill="#b8973a" opacity="0.5"/>
+  <line x1="300" y1="50" x2="300" y2="80" stroke="#2a2a28" stroke-width="1"/>
+  <circle cx="300" cy="50" r="3" fill="#3d3d38"/>
+  <line x1="460" y1="40" x2="460" y2="80" stroke="#2a2a28" stroke-width="1"/>
+  <line x1="400" y1="80" x2="460" y2="80" stroke="#2a2a28" stroke-width="1"/>
+  <circle cx="400" cy="80" r="3" fill="#b8973a" opacity="0.5"/>
+  <!-- Bottom decorative circuits -->
+  <line x1="140" y1="280" x2="140" y2="260" stroke="#2a2a28" stroke-width="1"/>
+  <line x1="140" y1="280" x2="280" y2="280" stroke="#2a2a28" stroke-width="1"/>
+  <circle cx="280" cy="280" r="3" fill="#3d3d38"/>
+  <line x1="380" y1="260" x2="380" y2="295" stroke="#b8973a" stroke-width="1" opacity="0.3"/>
+  <line x1="380" y1="295" x2="520" y2="295" stroke="#b8973a" stroke-width="1" opacity="0.3"/>
+  <circle cx="520" cy="295" r="3" fill="#b8973a" opacity="0.4"/>
+  <!-- Gold accent line -->
+  <line x1="0" y1="355" x2="600" y2="355" stroke="#b8973a" stroke-width="3"/>
+  <!-- Label -->
+  <text x="40" y="330" font-family="serif" font-size="13" fill="#3d3d38" letter-spacing="3">AUTOMATION</text>
+  <text x="40" y="348" font-family="serif" font-size="11" fill="#b8973a" letter-spacing="2">DESIGN</text>
+</svg>

@@ -52,7 +52,7 @@ nav.scrolled{background:rgba(247,245,240,.97);backdrop-filter:blur(12px);border-
 .hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;position:relative;overflow:hidden}
 .hero-left{display:flex;flex-direction:column;justify-content:center;padding:140px 60px 80px 10vw;position:relative;z-index:2}
 .hero-right{position:relative;overflow:hidden}
-.hero-right-img{position:absolute;inset:0;background:url('images/hero-background.jpg') center/cover no-repeat}
+.hero-right-img{position:absolute;inset:0;background:url('images/generated/hero-bg.svg') center/cover no-repeat}
 .hero-right-overlay{position:absolute;inset:0;background:linear-gradient(105deg,var(--cream) 0%,transparent 30%)}
 .hero-eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:48px}
 .hero-eyebrow-line{width:32px;height:1px;background:var(--gold)}
@@ -509,21 +509,21 @@ footer{background:#111110;padding:56px 40px 32px}
     <div class="reasons-grid">
       <div class="reason-card reveal">
         <div class="reason-img">
-          <div class="reason-img-ph" style="background-image:url('images/reason-1.jpg');background-size:cover;background-position:center;width:100%;height:100%"></div>
+          <img src="images/generated/reason-1.svg" alt="上場企業実務経験" style="width:100%;height:100%;object-fit:cover;">
         </div>
         <div class="reason-title">上場企業の「中」を知っている</div>
         <div class="reason-desc">理想論ではなく、実際に動いていた管理体制の経験から設計する。何が機能して、何が機能しないかを実務として知っている。「あるべき姿」を中小企業の規模に翻訳して提案できる。</div>
       </div>
       <div class="reason-card reveal reveal-delay-1">
         <div class="reason-img">
-          <div class="reason-img-ph" style="background-image:url('images/reason-2.jpg');background-size:cover;background-position:center;width:100%;height:100%"></div>
+          <img src="images/generated/reason-2.svg" alt="AI自動化設計" style="width:100%;height:100%;object-fit:cover;">
         </div>
         <div class="reason-title">ツールを入れるだけで終わらない</div>
         <div class="reason-desc">会計ソフトの設定だけでなく、業務フロー・担当者の動き方・自動化の設計まで含めて「動く状態」にする。「導入したけど使いこなせていない」を起こさない設計が得意。</div>
       </div>
       <div class="reason-card reveal reveal-delay-2">
         <div class="reason-img">
-          <div class="reason-img-ph" style="background-image:url('images/reason-3.jpg');background-size:cover;background-position:center;width:100%;height:100%"></div>
+          <img src="images/generated/reason-3.svg" alt="経理ITAIの統合設計" style="width:100%;height:100%;object-fit:cover;">
         </div>
         <div class="reason-title">経理・IT・AIを一人で設計できる</div>
         <div class="reason-desc">経理の知識・IT設計・AI活用の3つを組み合わせられる人間は少ない。一人で担えることで、専門家間の分断が起きない設計ができる。監査役の目で数字の歪みも正直に指摘する。</div>
@@ -542,7 +542,7 @@ footer{background:#111110;padding:56px 40px 32px}
     <div class="cases-grid">
       <div class="case-card reveal">
         <div class="case-img">
-          <img src="images/case-1.jpg" alt="管理会計構築事例" loading="lazy">
+          <img src="images/generated/case-1.svg" alt="管理会計構築事例" style="width:100%;height:100%;object-fit:cover;">
         </div>
         <div class="case-body">
           <span class="case-tag">管理会計構築 / 月次高速化 ｜ 製造業・従業員30名</span>
@@ -554,7 +554,7 @@ footer{background:#111110;padding:56px 40px 32px}
       </div>
       <div class="case-card reveal reveal-delay-1">
         <div class="case-img">
-          <img src="images/case-2.jpg" alt="AI自動化設計事例" loading="lazy">
+          <img src="images/generated/case-2.svg" alt="AI自動化設計事例" style="width:100%;height:100%;object-fit:cover;">
         </div>
         <div class="case-body">
           <span class="case-tag">AI自動化設計 / バックオフィスDX ｜ 建設業・従業員20名</span>
@@ -566,7 +566,7 @@ footer{background:#111110;padding:56px 40px 32px}
       </div>
       <div class="case-card reveal reveal-delay-2">
         <div class="case-img">
-          <img src="images/case-3.jpg" alt="管理部門構築事例" loading="lazy">
+          <img src="images/generated/case-3.svg" alt="管理部門構築事例" style="width:100%;height:100%;object-fit:cover;">
         </div>
         <div class="case-body">
           <span class="case-tag">管理部門ゼロからの構築 / 助成金活用 ｜ 小売業・従業員15名</span>
@@ -585,21 +585,9 @@ footer{background:#111110;padding:56px 40px 32px}
   <div class="sec-inner">
     <div class="profile-layout">
       <div class="profile-visual">
-        <div class="profile-img-wrap reveal">
-          <div class="profile-img">
-            <!-- プロフィール写真が入るまでのSVGプレースホルダー -->
-            <svg viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-              <rect width="300" height="400" fill="#eeeae0"/>
-              <circle cx="150" cy="140" r="56" fill="#d8d4c8"/>
-              <ellipse cx="150" cy="340" rx="90" ry="70" fill="#d8d4c8"/>
-              <line x1="40" y1="370" x2="260" y2="370" stroke="#c9a84c" stroke-width="2"/>
-            </svg>
-            <div class="profile-img-gold-bar"></div>
-          </div>
-        </div>
-        <div class="reveal reveal-delay-1">
+        <div class="reveal">
           <div class="profile-name">川戸 浩嗣</div>
-          <div class="profile-name-en">KOJI KAWATO / VISION ASSIST PARTNER</div>
+          <div class="profile-name-en">KAWATO HIROSHI / VISION ASSIST PARTNER</div>
           <div class="profile-tags">
             <span class="profile-tag">上場企業経理出身</span>
             <span class="profile-tag">外部監査役</span>
@@ -614,7 +602,7 @@ footer{background:#111110;padding:56px 40px 32px}
           <ul class="career-items">
             <li class="career-item">
               <span class="career-yr">上場企業</span>
-              <span class="career-text">東証上場企業の経理部門に勤務。<strong>月次・年次決算、管理会計、内部統制、開示業務を担当。</strong>上場企業水準の管理体制を内側から設計・運用してきた経験を持つ。</span>
+              <span class="career-text">東証上場企業の経理部門に勤務。<strong>月次・年次決算、管理会計、内部統制を担当。</strong>上場企業水準の管理体制を内側から設計・運用してきた経験を持つ。</span>
             </li>
             <li class="career-item">
               <span class="career-yr">外部監査役</span>
@@ -677,12 +665,12 @@ footer{background:#111110;padding:56px 40px 32px}
         <span class="price-badge">RETAINER（推奨）</span>
         <div class="price-title">管理部門 継続設計支援</div>
         <div class="price-amount">月30〜50万円<small>（税別）</small></div>
-        <p class="price-note">管理部門全体を継続的に設計・改善。月1〜4回の定例MTG＋随時Slack相談対応。</p>
+        <p class="price-note">管理部門全体を継続的に設計・改善。月1〜4回の定例MTGと随時オンライン相談対応。</p>
         <ul class="price-list">
           <li>月次決算の設計・高速化支援</li>
           <li>管理会計・経営ダッシュボード構築</li>
           <li>AI自動化・ツール最適化</li>
-          <li>随時相談対応（Slack）</li>
+          <li>随時相談対応（オンライン）</li>
           <li>助成金活用の提案・申請支援</li>
         </ul>
       </div>
@@ -719,7 +707,7 @@ footer{background:#111110;padding:56px 40px 32px}
       <div class="process-step reveal reveal-delay-3">
         <div class="ps-num">04</div>
         <div class="ps-title">継続的な伴走</div>
-        <div class="ps-desc">月1〜4回の定例MTGと随時Slackでの相談対応。「数字で動く会社」になるまで伴走します。体制が整ったら支援頻度を落とすことも可能です。</div>
+        <div class="ps-desc">月1〜4回の定例MTGと随時オンライン相談対応。「数字で動く会社」になるまで伴走します。体制が整ったら支援頻度を落とすことも可能です。</div>
         <span class="ps-period">長期パートナーとして</span>
       </div>
     </div>

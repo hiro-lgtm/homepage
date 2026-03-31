@@ -1,0 +1,44 @@
+<svg viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="300" fill="#1a1a18"/>
+  <!-- Before: many manual steps -->
+  <rect x="40" y="60" width="180" height="180" rx="2" fill="#2a2a28" stroke="#3d3d38" stroke-width="1"/>
+  <text x="130" y="88" font-family="sans-serif" font-size="9" fill="#8a8880" text-anchor="middle" letter-spacing="2">MANUAL</text>
+  <!-- Manual process items -->
+  <rect x="56" y="100" width="148" height="16" rx="1" fill="#3d3d38"/>
+  <rect x="56" y="124" width="148" height="16" rx="1" fill="#3d3d38"/>
+  <rect x="56" y="148" width="148" height="16" rx="1" fill="#3d3d38"/>
+  <rect x="56" y="172" width="148" height="16" rx="1" fill="#3d3d38"/>
+  <rect x="56" y="196" width="100" height="16" rx="1" fill="#3d3d38"/>
+  <text x="72" y="112" font-family="sans-serif" font-size="8" fill="#5a5a58">領収書を手で仕分け</text>
+  <text x="72" y="136" font-family="sans-serif" font-size="8" fill="#5a5a58">Excel に手入力</text>
+  <text x="72" y="160" font-family="sans-serif" font-size="8" fill="#5a5a58">会計ソフトへ転記</text>
+  <text x="72" y="184" font-family="sans-serif" font-size="8" fill="#5a5a58">月次レポート作成</text>
+  <text x="72" y="208" font-family="sans-serif" font-size="8" fill="#5a5a58">確認・修正...</text>
+  <!-- Time indicator before -->
+  <text x="130" y="252" font-family="serif" font-size="22" fill="#5a5a58" text-anchor="middle" font-weight="700">80h</text>
+  <text x="130" y="268" font-family="sans-serif" font-size="9" fill="#5a5a58" text-anchor="middle" letter-spacing="1">/ MONTH</text>
+  <!-- Arrow -->
+  <polygon points="240,150 270,135 270,165" fill="#b8973a" opacity="0.8"/>
+  <line x1="220" y1="150" x2="268" y2="150" stroke="#b8973a" stroke-width="2" opacity="0.8"/>
+  <!-- After: automated -->
+  <rect x="280" y="60" width="280" height="180" rx="2" fill="#2a2a28" stroke="#b8973a" stroke-width="1.5"/>
+  <text x="420" y="88" font-family="sans-serif" font-size="9" fill="#b8973a" text-anchor="middle" letter-spacing="2">AI AUTOMATION</text>
+  <!-- Auto flow -->
+  <rect x="296" y="100" width="112" height="28" rx="2" fill="#3d3d38" stroke="#b8973a" stroke-width="0.5"/>
+  <text x="352" y="118" font-family="sans-serif" font-size="9" fill="#b8973a" text-anchor="middle">OCR スキャン</text>
+  <line x1="408" y1="114" x2="430" y2="114" stroke="#b8973a" stroke-width="1" opacity="0.5"/>
+  <polygon points="430,110 438,114 430,118" fill="#b8973a" opacity="0.5"/>
+  <rect x="440" y="100" width="104" height="28" rx="2" fill="#3d3d38" stroke="#b8973a" stroke-width="0.5"/>
+  <text x="492" y="118" font-family="sans-serif" font-size="9" fill="#b8973a" text-anchor="middle">AI 仕訳提案</text>
+  <line x1="352" y1="128" x2="352" y2="148" stroke="#b8973a" stroke-width="1" opacity="0.5"/>
+  <rect x="296" y="148" width="112" height="28" rx="2" fill="#3d3d38" stroke="#b8973a" stroke-width="0.5"/>
+  <text x="352" y="166" font-family="sans-serif" font-size="9" fill="#b8973a" text-anchor="middle">自動転記</text>
+  <line x1="492" y1="128" x2="492" y2="148" stroke="#b8973a" stroke-width="1" opacity="0.5"/>
+  <rect x="440" y="148" width="104" height="28" rx="2" fill="#3d3d38" stroke="#b8973a" stroke-width="0.5"/>
+  <text x="492" y="166" font-family="sans-serif" font-size="9" fill="#b8973a" text-anchor="middle">レポート生成</text>
+  <!-- Time indicator after -->
+  <text x="420" y="252" font-family="serif" font-size="22" fill="#b8973a" text-anchor="middle" font-weight="700">30h</text>
+  <text x="420" y="268" font-family="sans-serif" font-size="9" fill="#b8973a" text-anchor="middle" letter-spacing="1">/ MONTH  —62%↓</text>
+  <!-- Gold bottom accent -->
+  <rect x="0" y="292" width="600" height="8" fill="#b8973a"/>
+</svg>

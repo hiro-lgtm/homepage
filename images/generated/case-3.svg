@@ -1,0 +1,38 @@
+<svg viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="300" fill="#f0ece4"/>
+  <!-- Org chart -->
+  <!-- Top node: 社長 -->
+  <rect x="240" y="40" width="120" height="44" rx="2" fill="#1a1a18"/>
+  <text x="300" y="58" font-family="serif" font-size="12" fill="#ffffff" text-anchor="middle">代表取締役</text>
+  <text x="300" y="74" font-family="sans-serif" font-size="9" fill="#b8973a" text-anchor="middle" letter-spacing="1">PRESIDENT</text>
+  <!-- Connector lines -->
+  <line x1="300" y1="84" x2="300" y2="110" stroke="#c8c4b8" stroke-width="1.5"/>
+  <line x1="120" y1="110" x2="480" y2="110" stroke="#c8c4b8" stroke-width="1.5"/>
+  <line x1="120" y1="110" x2="120" y2="130" stroke="#c8c4b8" stroke-width="1.5"/>
+  <line x1="300" y1="110" x2="300" y2="130" stroke="#c8c4b8" stroke-width="1.5"/>
+  <line x1="480" y1="110" x2="480" y2="130" stroke="#c8c4b8" stroke-width="1.5"/>
+  <!-- Child nodes -->
+  <rect x="60" y="130" width="120" height="44" rx="2" fill="#d8d4c8"/>
+  <text x="120" y="148" font-family="serif" font-size="11" fill="#3d3d38" text-anchor="middle">経理・財務</text>
+  <text x="120" y="163" font-family="sans-serif" font-size="8" fill="#8a8880" text-anchor="middle" letter-spacing="1">ACCOUNTING</text>
+  <rect x="240" y="130" width="120" height="44" rx="2" fill="#d8d4c8"/>
+  <text x="300" y="148" font-family="serif" font-size="11" fill="#3d3d38" text-anchor="middle">総務・労務</text>
+  <text x="300" y="163" font-family="sans-serif" font-size="8" fill="#8a8880" text-anchor="middle" letter-spacing="1">GENERAL AFFAIRS</text>
+  <rect x="420" y="130" width="120" height="44" rx="2" fill="#b8973a" opacity="0.7"/>
+  <text x="480" y="148" font-family="serif" font-size="11" fill="#1a1a18" text-anchor="middle">IT・AI設計</text>
+  <text x="480" y="163" font-family="sans-serif" font-size="8" fill="#1a1a18" text-anchor="middle" letter-spacing="1">DIGITAL</text>
+  <!-- Second level connectors -->
+  <line x1="120" y1="174" x2="120" y2="194" stroke="#c8c4b8" stroke-width="1.5"/>
+  <line x1="300" y1="174" x2="300" y2="194" stroke="#c8c4b8" stroke-width="1.5"/>
+  <!-- Second level leaf nodes -->
+  <rect x="60" y="194" width="120" height="36" rx="2" fill="#eeeae0" stroke="#d8d4c8" stroke-width="1"/>
+  <text x="120" y="212" font-family="sans-serif" font-size="9" fill="#8a8880" text-anchor="middle" letter-spacing="1">月次決算</text>
+  <text x="120" y="224" font-family="sans-serif" font-size="9" fill="#8a8880" text-anchor="middle" letter-spacing="1">管理会計</text>
+  <rect x="240" y="194" width="120" height="36" rx="2" fill="#eeeae0" stroke="#d8d4c8" stroke-width="1"/>
+  <text x="300" y="212" font-family="sans-serif" font-size="9" fill="#8a8880" text-anchor="middle" letter-spacing="1">就業規則</text>
+  <text x="300" y="224" font-family="sans-serif" font-size="9" fill="#8a8880" text-anchor="middle" letter-spacing="1">給与計算</text>
+  <!-- Label -->
+  <text x="300" y="272" font-family="sans-serif" font-size="10" fill="#8a8880" text-anchor="middle" letter-spacing="3">ZERO → BUILT</text>
+  <!-- Gold bottom accent -->
+  <rect x="0" y="292" width="600" height="8" fill="#b8973a"/>
+</svg>
