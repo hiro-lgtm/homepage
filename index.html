@@ -806,7 +806,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
   const btn = this.querySelector('.cta-submit');
   btn.textContent = '送信中...'; btn.disabled = true;
   try {
-    await fetch('https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec', {
+    await fetch('https://script.google.com/macros/s/AKfycbyM8h7qkMP4yhszBDBOoqhIpmEZN7zefiZWtASF_pqIDdjj1bYste8Xx-1GafZjtjzn/exec', {
       method: 'POST', body: new FormData(this), mode: 'no-cors'
     });
     btn.textContent = '✓ 送信完了！2営業日以内にご連絡します';
