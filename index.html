@@ -725,6 +725,22 @@ footer{background:#111110;padding:56px 40px 32px}
 </div>
 </div>
 </section>
+<style>
+#contact.monthly-consultation .cta-title{font-size:clamp(28px,4vw,42px);line-height:1.45}
+#contact.monthly-consultation .cta-desc{margin-bottom:0}
+@media(max-width:768px){#contact.monthly-consultation{padding-top:32px;padding-bottom:40px;scroll-margin-top:72px}#contact.monthly-consultation .cta-inner{gap:24px}#contact.monthly-consultation .cta-eyebrow{margin-bottom:16px}#contact.monthly-consultation .consultation-note{margin-top:0}}
+</style>
+<script>
+(function(){
+  if(new URLSearchParams(location.search).get('consultation')!=='monthly-close')return;
+  const section=document.getElementById('contact');
+  section.classList.add('monthly-consultation');
+  section.querySelector('.cta-title').textContent='月次決算の遅れを、30分の無料相談で整理する';
+  section.querySelector('.cta-desc').textContent='今の締め日・資料回収・確認の流れを伺い、改善の優先順位を一緒に確認します。通常2営業日以内にご連絡します。';
+  document.getElementById('contact-service').value='speed';
+  section.querySelector('.consultation-note').textContent='相談内容は「月次決算を早くしたい」を選択済みです。変更もできます。送信後に日程を確認します。送信だけで予約・有料契約は確定しません。';
+})();
+</script>
 <!-- FOOTER -->
 <footer>
 <div class="footer-inner">
