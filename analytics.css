@@ -1,0 +1,6 @@
+.ks-consent{position:fixed;left:16px;right:16px;bottom:58px;max-width:780px;margin:auto;padding:20px;background:#fff;color:#191a18;border:1px solid #b8b29f;border-radius:12px;box-shadow:0 8px 38px #0003;z-index:9999;font:14px/1.7 system-ui,sans-serif;text-align:left}
+.ks-consent[hidden]{display:none}
+.ks-consent p{margin:0 0 12px}.ks-consent a{color:#343a2c;text-decoration:underline;margin-right:16px}.ks-consent button,.ks-consent-settings{background:#fff;color:#20261a;border:1px solid #667153;border-radius:6px;padding:10px 14px;font:inherit;cursor:pointer;margin:4px}
+.ks-consent button:hover{background:#f0f3eb}.ks-consent button:focus-visible,.ks-consent-settings:focus-visible,.ks-consent a:focus-visible{outline:3px solid #55742c;outline-offset:3px}
+.ks-consent-settings{position:fixed;bottom:8px;right:12px;z-index:9998;font:12px/1.5 system-ui,sans-serif;background:#fff}
+@media(max-width:480px){.ks-consent{left:8px;right:8px;bottom:56px;padding:16px;font-size:13px}.ks-consent a{display:block;margin:4px 0}.ks-consent button{min-height:44px}}
