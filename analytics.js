@@ -8,7 +8,7 @@
   const key = 'kstate_analytics_consent';
   const ttl = 180 * 24 * 60 * 60 * 1000;
   const eventRules = {
-    cta_click: {cta_id: ['nav_consultation','hero_consultation','footer_consultation','footer_form','email','diagnosis','diagnosis_result','resource']},
+    cta_click: {cta_id: ['nav_consultation','hero_consultation','footer_consultation','footer_form','email','diagnosis','diagnosis_result','resource','service_consultation','guide']},
     contact_form_start: {form_id: ['contact']},
     contact_submit_attempt: {form_id: ['contact']},
     contact_submit_unverified: {form_id: ['contact']},
@@ -20,7 +20,15 @@
   const knownPages = {
     '/': 'home', '/index.html': 'home', '/privacy.html': 'privacy',
     '/legal.html': 'legal', '/terms.html': 'terms', '/book-bonus.html': 'book_bonus',
-    '/check/': 'management_diagnosis', '/check/index.html': 'management_diagnosis'
+    '/check/': 'management_diagnosis', '/check/index.html': 'management_diagnosis',
+    "/services/management/": "service_management", "/services/management/index.html": "service_management",
+    "/services/monthly-close/": "service_monthly_close", "/services/monthly-close/index.html": "service_monthly_close",
+    "/services/ai-accounting/": "service_ai_accounting", "/services/ai-accounting/index.html": "service_ai_accounting",
+    "/guides/monthly-close-checklist/": "guide_monthly_close_checklist", "/guides/monthly-close-checklist/index.html": "guide_monthly_close_checklist",
+    "/guides/accounting-automation/": "guide_accounting_automation", "/guides/accounting-automation/index.html": "guide_accounting_automation",
+    "/guides/backoffice-roles/": "guide_backoffice_roles", "/guides/backoffice-roles/index.html": "guide_backoffice_roles",
+    "/services/": "services", "/services/index.html": "services",
+    "/guides/": "guides", "/guides/index.html": "guides"
   };
   const label = knownPages[w.location.pathname] || 'other';
   let accepted = false, loaded = false, started = false;
